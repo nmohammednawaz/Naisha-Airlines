@@ -1,54 +1,89 @@
 package com.naishaairlines.serviceimplements;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.naishaairlines.configurations.PasswordEncoderConfig;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Admin;
+import com.naishaairlines.repository.AdminRepository;
 import com.naishaairlines.service.AdminServices;
 
 public class AdminServiceImplements implements AdminServices {
+	
+	@Autowired
+	private PasswordEncoderConfig passwordEncoderConfig;
+	
+	@Autowired
+	private AdminRepository adminRepository;
+	
+	public void checkDuplicate(String emailId, String username, String contactNumber) throws DuplicateDataException {
+		if(adminRepository.existsByEmail(emailId)) {
+			throw new DuplicateDataException("Dear User, Email Id Already Registered");
+		}
+		if(adminRepository.existsByUsername(username)) {
+			throw new DuplicateDataException("Dear User, Username Already Registered");
+		}
+		if(adminRepository.existsByContactNumber(contactNumber)) {
+			throw new DuplicateDataException("Dear User, Contact Number Already Registered");
+		}
+	}
 
 	@Override
 	public Admin registerAdmin(Admin admin) throws DuplicateDataException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		checkDuplicate(admin.getEmailId(), admin.getUsername(), admin.getContactNumber());
+		
+		admin.setPassword(passwordEncoderConfig.passwordEncoder().encode(admin.getPassword()));
+		return adminRepository.save(admin);
 	}
 
 	@Override
 	public Admin findAdminById(Integer adminId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return adminRepository.findById(adminId).orElseThrow(() -> new NoDataFoundException("Dear User, No Admin Found With Id: " + adminId));
 	}
 
 	@Override
 	public Admin findAdminByEmailId(String emailId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return adminRepository.findByEmailId(emailId).orElseThrow(() -> new NoDataFoundException("Dear User, No Admin Found With Email Id: " + emailId));
 	}
 
 	@Override
 	public Admin findAdminByUsername(String username) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return adminRepository.findByUsername(username).orElseThrow(() -> new NoDataFoundException("Dear User, No Admin Found Username: " + username));
 	}
 
 	@Override
-	public Admin updateAdmin(Admin admin) throws NoDataFoundException {
+	public Admin updateAdmin(Admin admin) throws DuplicateDataException {
 		// TODO Auto-generated method stub
-		return null;
+		return adminRepository.save(admin);
 	}
 
 	@Override
 	public Admin deActivateAdmin(Integer adminId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Optional<Admin> adminOptional = adminRepository.findById(adminId);
+	    
+	    if (!adminOptional.isPresent()) {
+	        throw new NoDataFoundException("No Admin Found With Id: " + adminId);
+	    }
+	    
+	    Admin admin = adminOptional.get();
+	    admin.setActive(false);
+	    
+	    return adminRepository.save(admin);
 	}
 
 	@Override
 	public List<Admin> viewAllAdmins() throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return adminRepository.findAll();
 	}
 
 }

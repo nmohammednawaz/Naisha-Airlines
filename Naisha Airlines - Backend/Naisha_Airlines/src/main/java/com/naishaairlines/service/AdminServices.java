@@ -12,7 +12,7 @@ public interface AdminServices {
 	Admin findAdminById(Integer adminId) throws NoDataFoundException;
 	Admin findAdminByEmailId(String emailId) throws NoDataFoundException;
 	Admin findAdminByUsername(String username) throws NoDataFoundException;
-	Admin updateAdmin(Admin admin) throws NoDataFoundException;
+	Admin updateAdmin(Admin admin) throws DuplicateDataException;
 	Admin deActivateAdmin(Integer adminId) throws NoDataFoundException;
 	List<Admin> viewAllAdmins() throws NoDataFoundException;
 }
