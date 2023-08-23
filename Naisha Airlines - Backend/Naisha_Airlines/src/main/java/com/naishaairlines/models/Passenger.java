@@ -14,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -63,13 +64,12 @@ public class Passenger {
     @Pattern(regexp = "^(Admin|User)$", message = "Invalid role")
     private String role;
     
+    @NotNull(message = "isActive field must not be null")
+    private boolean isActive;
+    
     @JsonIgnore
     @OneToMany(mappedBy = "passenger")
     private List<Booking> bookings;
-    
-//    @JsonIgnore
-//    @OneToMany(mappedBy = "passenger")
-//    private List<Feedback> feedbacks;
     
     @JsonIgnore
     @OneToMany(mappedBy = "passenger")
@@ -83,7 +83,8 @@ public class Passenger {
 			@NotBlank(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
 			@NotBlank(message = "Contact number is required") String contactNumber,
-			@Pattern(regexp = "^(Admin|User)$", message = "Invalid role") String role, List<Booking> bookings,
+			@Pattern(regexp = "^(Admin|User)$", message = "Invalid role") String role,
+			@NotNull(message = "isActive field must not be null") boolean isActive, List<Booking> bookings,
 			List<Payment> payments) {
 		super();
 		this.firstName = firstName;
@@ -95,13 +96,10 @@ public class Passenger {
 		this.password = password;
 		this.contactNumber = contactNumber;
 		this.role = role;
+		this.isActive = isActive;
 		this.bookings = bookings;
 		this.payments = payments;
 	}
-    
-    
-
-    
-    
+ 
     
 }

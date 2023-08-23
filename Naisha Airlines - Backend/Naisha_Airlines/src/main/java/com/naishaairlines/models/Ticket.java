@@ -1,6 +1,9 @@
 package com.naishaairlines.models;
 
 import java.time.LocalDate;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -49,12 +53,17 @@ public class Ticket {
     
     @PastOrPresent(message = "Booking date must be in the past or present")
     private LocalDate bookingDate;
+    
+    @OneToMany(mappedBy = "ticket")
+    @JsonIgnore
+    private List<AdditionalPassenger> additionalPassengers;
 
 	public Ticket(@NotBlank(message = "Ticket number is required") String ticketNumber,
 			@NotNull(message = "Passenger is required") Passenger passenger,
 			@NotNull(message = "Flight is required") Flight flight, @NotNull(message = "Seat is required") Seat seat,
 			@NotBlank(message = "Booking Id is required") Booking booking,
-			@PastOrPresent(message = "Booking date must be in the past or present") LocalDate bookingDate) {
+			@PastOrPresent(message = "Booking date must be in the past or present") LocalDate bookingDate,
+			List<AdditionalPassenger> additionalPassengers) {
 		super();
 		this.ticketNumber = ticketNumber;
 		this.passenger = passenger;
@@ -62,7 +71,8 @@ public class Ticket {
 		this.seat = seat;
 		this.booking = booking;
 		this.bookingDate = bookingDate;
-	}
+		this.additionalPassengers = additionalPassengers;
+	} 
     
     
     

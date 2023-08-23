@@ -15,6 +15,7 @@ import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -60,6 +61,9 @@ public class Flight {
     @OneToMany(mappedBy = "flight")
     private List<Booking> bookings;
     
+    @NotNull(message = "isDeleted field must not be null")
+    private boolean isDeleted;
+    
     @AssertTrue(message = "Available seats cannot be greater than total seats")
     private boolean isAvailableSeatsValid() {
         return availableSeats <= totalSeats;
@@ -71,8 +75,8 @@ public class Flight {
 			@Future(message = "Arrival time must be in the future") LocalDateTime arrivalTime,
 			@Min(value = 1, message = "Total seats must be at least 1") int totalSeats,
 			@Min(value = 0, message = "Available seats cannot be negative") int availableSeats,
-			@Positive(message = "Fare must be a positive value") double fare, List<Seat> seats,
-			List<Booking> bookings) {
+			@Positive(message = "Fare must be a positive value") double fare, List<Seat> seats, List<Booking> bookings,
+			@NotNull(message = "isDeleted field must not be null") boolean isDeleted) {
 		super();
 		this.flightNumber = flightNumber;
 		this.departureAirport = departureAirport;
@@ -84,7 +88,9 @@ public class Flight {
 		this.fare = fare;
 		this.seats = seats;
 		this.bookings = bookings;
+		this.isDeleted = isDeleted;
 	}
+
     
     
 }
