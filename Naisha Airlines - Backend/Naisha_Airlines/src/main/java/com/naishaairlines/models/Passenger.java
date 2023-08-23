@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -42,16 +43,22 @@ public class Passenger {
     
     @Email(message = "Invalid email format")
     @NotBlank(message = "Email is required")
+    @Column(unique = true)
     private String emailId;
     
     @NotBlank(message = "Username is required")
     @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters")
+    @Column(unique = true)
     private String username;
     
     @NotBlank(message = "Password is required")
     @Size(min = 8, message = "Password must be at least 8 characters")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+    
+    @NotBlank(message = "Contact number is required")
+    @Column(unique = true)
+    private String contactNumber;
     
     @Pattern(regexp = "^(Admin|User)$", message = "Invalid role")
     private String role;
@@ -60,9 +67,9 @@ public class Passenger {
     @OneToMany(mappedBy = "passenger")
     private List<Booking> bookings;
     
-    @JsonIgnore
-    @OneToMany(mappedBy = "passenger")
-    private List<Feedback> feedbacks;
+//    @JsonIgnore
+//    @OneToMany(mappedBy = "passenger")
+//    private List<Feedback> feedbacks;
     
     @JsonIgnore
     @OneToMany(mappedBy = "passenger")
@@ -75,8 +82,9 @@ public class Passenger {
 			@Email(message = "Invalid email format") @NotBlank(message = "Email is required") String emailId,
 			@NotBlank(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
+			@NotBlank(message = "Contact number is required") String contactNumber,
 			@Pattern(regexp = "^(Admin|User)$", message = "Invalid role") String role, List<Booking> bookings,
-			List<Feedback> feedbacks, List<Payment> payments) {
+			List<Payment> payments) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -85,11 +93,15 @@ public class Passenger {
 		this.emailId = emailId;
 		this.username = username;
 		this.password = password;
+		this.contactNumber = contactNumber;
 		this.role = role;
 		this.bookings = bookings;
-		this.feedbacks = feedbacks;
 		this.payments = payments;
 	}
+    
+    
+
+    
     
     
 }

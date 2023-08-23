@@ -32,13 +32,21 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
 	}
 	
+	@ExceptionHandler(Exception.class)
+	public ResponseEntity<CustomizedErrorDetails> commonException(Exception ex, WebRequest wr){
+		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
+		customizedErrorDetails.setMessage(ex.getMessage());
+		customizedErrorDetails.setDescription(wr.getDescription(false));
+		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
+	}
+	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<CustomizedErrorDetails> methodArgumentNotValidException(MethodArgumentNotValidException mnv, WebRequest wr){
 		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
 		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
 		
 		customizedErrorDetails.setMessage("Validation failed !!");
-//		myErrorDetails.setDiscription("");
 //		 list of all error object is here
 		List<ObjectError> allErrors = mnv.getBindingResult().getAllErrors();
 //		 list of all error messages is here
