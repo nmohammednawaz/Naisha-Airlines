@@ -1,0 +1,819 @@
+2023-08-23T10:44:58.951+05:30  INFO 10716 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 10716 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T10:44:58.955+05:30  INFO 10716 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T10:44:59.041+05:30  INFO 10716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T10:44:59.043+05:30  INFO 10716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T10:45:00.228+05:30  INFO 10716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T10:45:00.267+05:30  INFO 10716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2023-08-23T10:45:01.295+05:30  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-23T10:45:01.315+05:30  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T10:45:01.316+05:30  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T10:45:01.572+05:30  INFO 10716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T10:45:01.574+05:30  INFO 10716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2528 ms
+2023-08-23T10:45:02.136+05:30  INFO 10716 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T10:45:02.364+05:30  INFO 10716 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T10:45:02.373+05:30  INFO 10716 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T10:45:02.888+05:30  INFO 10716 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T10:45:03.364+05:30  INFO 10716 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T10:45:03.420+05:30  INFO 10716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T10:45:04.500+05:30  INFO 10716 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c711bb8
+2023-08-23T10:45:04.503+05:30  INFO 10716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T10:45:05.120+05:30 ERROR 10716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.naishaairlines.models.Passenger.feedbacks' is 'mappedBy' a property named 'passenger' which does not exist in the target entity 'com.naishaairlines.models.Feedback'
+2023-08-23T10:45:05.120+05:30  WARN 10716 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.naishaairlines.models.Passenger.feedbacks' is 'mappedBy' a property named 'passenger' which does not exist in the target entity 'com.naishaairlines.models.Feedback'
+2023-08-23T10:45:05.122+05:30  INFO 10716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T10:45:05.136+05:30  INFO 10716 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T10:45:05.141+05:30  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T10:45:05.160+05:30  INFO 10716 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-23T10:45:05.194+05:30 ERROR 10716 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.naishaairlines.models.Passenger.feedbacks' is 'mappedBy' a property named 'passenger' which does not exist in the target entity 'com.naishaairlines.models.Feedback'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at com.naishaairlines.NaishaAirlinesApplication.main(NaishaAirlinesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.hibernate.AnnotationException: Collection 'com.naishaairlines.models.Passenger.feedbacks' is 'mappedBy' a property named 'passenger' which does not exist in the target entity 'com.naishaairlines.models.Feedback'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1568) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1582) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1543) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1534) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1857) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1814) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:328) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 21 common frames omitted
+
+2023-08-23T10:47:33.681+05:30  INFO 14896 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 14896 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T10:47:33.684+05:30  INFO 14896 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T10:47:33.758+05:30  INFO 14896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T10:47:33.758+05:30  INFO 14896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T10:47:34.909+05:30  INFO 14896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T10:47:34.953+05:30  INFO 14896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+2023-08-23T10:47:36.041+05:30  INFO 14896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-23T10:47:36.059+05:30  INFO 14896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T10:47:36.060+05:30  INFO 14896 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T10:47:36.200+05:30  INFO 14896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T10:47:36.201+05:30  INFO 14896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2441 ms
+2023-08-23T10:47:36.484+05:30  INFO 14896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T10:47:36.588+05:30  INFO 14896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T10:47:36.593+05:30  INFO 14896 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T10:47:36.826+05:30  INFO 14896 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T10:47:37.073+05:30  INFO 14896 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T10:47:37.105+05:30  INFO 14896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T10:47:37.714+05:30  INFO 14896 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@277adb4d
+2023-08-23T10:47:37.717+05:30  INFO 14896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T10:47:38.332+05:30  INFO 14896 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T10:47:40.439+05:30  INFO 14896 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T10:47:42.092+05:30  INFO 14896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T10:47:42.260+05:30  WARN 14896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T10:47:43.378+05:30  WARN 14896 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c578b2bf-b73f-4cfd-822e-a1f75235a43a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T10:47:43.742+05:30  INFO 14896 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a1c1510, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31c7782e, org.springframework.security.web.context.SecurityContextHolderFilter@6f0e406a, org.springframework.security.web.header.HeaderWriterFilter@76615def, org.springframework.security.web.csrf.CsrfFilter@15297299, org.springframework.security.web.authentication.logout.LogoutFilter@d353f81, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6a51a4ce, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@503e6767, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4c266c4c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@bc21045, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d671040, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c5f77f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b2f277c, org.springframework.security.web.access.ExceptionTranslationFilter@22ad050, org.springframework.security.web.access.intercept.AuthorizationFilter@9ce21af]
+2023-08-23T10:47:43.864+05:30  INFO 14896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T10:47:43.937+05:30  WARN 14896 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-08-23T10:47:43.945+05:30  INFO 14896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T10:47:43.957+05:30  INFO 14896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T10:47:43.980+05:30  INFO 14896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T10:47:43.985+05:30  INFO 14896 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T10:47:44.041+05:30  INFO 14896 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-23T10:47:44.085+05:30 ERROR 14896 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-08-23T10:59:20.733+05:30  INFO 21276 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 21276 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T10:59:20.738+05:30  INFO 21276 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T10:59:20.818+05:30  INFO 21276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T10:59:20.818+05:30  INFO 21276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T10:59:22.140+05:30  INFO 21276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T10:59:22.178+05:30  INFO 21276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2023-08-23T10:59:23.200+05:30  INFO 21276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-23T10:59:23.215+05:30  INFO 21276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T10:59:23.215+05:30  INFO 21276 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T10:59:23.342+05:30  INFO 21276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T10:59:23.343+05:30  INFO 21276 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2525 ms
+2023-08-23T10:59:23.649+05:30  INFO 21276 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T10:59:23.723+05:30  INFO 21276 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T10:59:23.728+05:30  INFO 21276 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T10:59:24.043+05:30  INFO 21276 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T10:59:24.376+05:30  INFO 21276 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T10:59:24.399+05:30  INFO 21276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T10:59:24.968+05:30  INFO 21276 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11543cf7
+2023-08-23T10:59:24.972+05:30  INFO 21276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T10:59:25.830+05:30  INFO 21276 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T10:59:27.592+05:30  INFO 21276 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T10:59:28.316+05:30  INFO 21276 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T10:59:28.462+05:30  WARN 21276 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T10:59:29.851+05:30  WARN 21276 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bcc2483f-1c4e-4375-a180-e171b59fd7de
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T10:59:30.102+05:30  INFO 21276 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@764f4b0d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@541f2191, org.springframework.security.web.context.SecurityContextHolderFilter@32485774, org.springframework.security.web.header.HeaderWriterFilter@278e5cca, org.springframework.security.web.csrf.CsrfFilter@407cc6d8, org.springframework.security.web.authentication.logout.LogoutFilter@4f9f1551, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@376a7a3f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6ab8f269, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@118a9190, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22000e43, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6aa95186, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@739cf4bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4293a218, org.springframework.security.web.access.ExceptionTranslationFilter@4ae8a8f4, org.springframework.security.web.access.intercept.AuthorizationFilter@63c9a689]
+2023-08-23T10:59:30.188+05:30  INFO 21276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T10:59:30.251+05:30  WARN 21276 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-08-23T10:59:30.257+05:30  INFO 21276 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T10:59:30.266+05:30  INFO 21276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T10:59:30.280+05:30  INFO 21276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T10:59:30.284+05:30  INFO 21276 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T10:59:30.310+05:30  INFO 21276 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-23T10:59:30.347+05:30 ERROR 21276 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-08-23T11:00:03.737+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 17324 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:00:03.747+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:00:03.907+05:30  INFO 17324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T11:00:03.908+05:30  INFO 17324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T11:00:05.074+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:00:05.123+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:00:06.174+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:00:06.188+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:00:06.189+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:00:06.280+05:30  INFO 17324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:00:06.280+05:30  INFO 17324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2369 ms
+2023-08-23T11:00:06.634+05:30  INFO 17324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:00:06.789+05:30  INFO 17324 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T11:00:06.797+05:30  INFO 17324 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T11:00:07.106+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:00:07.333+05:30  INFO 17324 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:00:07.366+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T11:00:08.053+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46a9da42
+2023-08-23T11:00:08.058+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T11:00:08.703+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:00:10.302+05:30  INFO 17324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:00:10.633+05:30  INFO 17324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:00:10.702+05:30  WARN 17324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:00:11.323+05:30  WARN 17324 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bc5f2ade-cfd7-43b0-9a58-4adc1be33e29
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:00:11.513+05:30  INFO 17324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6eb9c7ec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ef3e7be, org.springframework.security.web.context.SecurityContextHolderFilter@7eef2c36, org.springframework.security.web.header.HeaderWriterFilter@7ba29061, org.springframework.security.web.csrf.CsrfFilter@84d3e7e, org.springframework.security.web.authentication.logout.LogoutFilter@48e1f951, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@256d7a6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@729522ad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@64b2cf86, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64029702, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495e1ee7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50e9174, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1094c915, org.springframework.security.web.access.ExceptionTranslationFilter@44f44312, org.springframework.security.web.access.intercept.AuthorizationFilter@48208745]
+2023-08-23T11:00:11.585+05:30  INFO 17324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:00:11.673+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:00:11.688+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 9.066 seconds (process running for 10.378)
+2023-08-23T11:25:34.304+05:30  INFO 17324 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-08-23T11:25:34.335+05:30  INFO 17324 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:25:34.364+05:30  INFO 17324 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:25:34.370+05:30  INFO 17324 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T11:25:34.387+05:30  INFO 17324 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T11:25:34.557+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 17324 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:25:34.558+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:25:34.947+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:25:34.951+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:25:35.092+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:25:35.093+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:25:35.093+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:25:35.120+05:30  INFO 17324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:25:35.120+05:30  INFO 17324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 555 ms
+2023-08-23T11:25:35.184+05:30  INFO 17324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:25:35.210+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:25:35.210+05:30  INFO 17324 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:25:35.214+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-08-23T11:25:35.262+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6df05468
+2023-08-23T11:25:35.263+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-08-23T11:25:35.382+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:25:35.664+05:30  INFO 17324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:25:35.970+05:30  INFO 17324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:25:36.003+05:30  WARN 17324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:25:36.167+05:30  WARN 17324 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d45dc812-0bbc-42bc-88fc-b5d4a029fc92
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:25:36.190+05:30  INFO 17324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47a9b7a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64a772ab, org.springframework.security.web.context.SecurityContextHolderFilter@e32ed99, org.springframework.security.web.header.HeaderWriterFilter@7ec2d8a6, org.springframework.security.web.csrf.CsrfFilter@5a38565b, org.springframework.security.web.authentication.logout.LogoutFilter@58c3a733, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@34460198, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@49c8fb82, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6069f566, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f668b68, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16a0e88a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21a700f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b3f1fc8, org.springframework.security.web.access.ExceptionTranslationFilter@a67bafc, org.springframework.security.web.access.intercept.AuthorizationFilter@2899149a]
+2023-08-23T11:25:36.203+05:30  INFO 17324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:25:36.217+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:25:36.234+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.75 seconds (process running for 1534.924)
+2023-08-23T11:25:36.241+05:30  INFO 17324 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:26:46.496+05:30  INFO 17324 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:26:46.515+05:30  INFO 17324 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:26:46.525+05:30  INFO 17324 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:26:46.526+05:30  INFO 17324 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-08-23T11:26:46.534+05:30  INFO 17324 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-23T11:26:46.654+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 17324 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:26:46.655+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:26:46.848+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:26:46.852+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:26:46.992+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:26:46.993+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:26:46.994+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:26:47.057+05:30  INFO 17324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:26:47.057+05:30  INFO 17324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 399 ms
+2023-08-23T11:26:47.168+05:30  INFO 17324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:26:47.197+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:26:47.197+05:30  INFO 17324 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:26:47.199+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-23T11:26:47.222+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@679b56b3
+2023-08-23T11:26:47.222+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-23T11:26:47.305+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:26:47.561+05:30  INFO 17324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:26:47.840+05:30  INFO 17324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:26:47.911+05:30  WARN 17324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:26:48.165+05:30  WARN 17324 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 71b66cac-98e0-46cc-8dcf-35e912555f2a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:26:48.209+05:30  INFO 17324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75f9f6ff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@842ebe2, org.springframework.security.web.context.SecurityContextHolderFilter@421e6412, org.springframework.security.web.header.HeaderWriterFilter@204c95c3, org.springframework.security.web.csrf.CsrfFilter@203a64a5, org.springframework.security.web.authentication.logout.LogoutFilter@29ccead8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2c65e482, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@386c4648, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@b005f9c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@261cc77f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31723fb8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c4a268f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b6746bc, org.springframework.security.web.access.ExceptionTranslationFilter@7ae6f273, org.springframework.security.web.access.intercept.AuthorizationFilter@16ad6d77]
+2023-08-23T11:26:48.413+05:30  INFO 17324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:26:48.434+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:26:48.448+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.828 seconds (process running for 1607.139)
+2023-08-23T11:26:48.459+05:30  INFO 17324 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:27:23.703+05:30  INFO 17324 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:27:23.736+05:30  INFO 17324 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:27:23.746+05:30  INFO 17324 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:27:23.747+05:30  INFO 17324 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-08-23T11:27:23.760+05:30  INFO 17324 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-08-23T11:27:23.957+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 17324 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:27:23.957+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:27:24.188+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:27:24.191+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:27:24.345+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:27:24.347+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:27:24.347+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:27:24.381+05:30  INFO 17324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:27:24.381+05:30  INFO 17324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 418 ms
+2023-08-23T11:27:24.440+05:30  INFO 17324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:27:24.452+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:27:24.453+05:30  INFO 17324 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:27:24.454+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-23T11:27:24.473+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3736d6b3
+2023-08-23T11:27:24.474+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-23T11:27:24.542+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:27:24.831+05:30  INFO 17324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:27:25.251+05:30  INFO 17324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:27:25.304+05:30  WARN 17324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:27:25.492+05:30  WARN 17324 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 78c256d9-490a-4db0-b14a-9a3e5e7b01e4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:27:25.518+05:30  INFO 17324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3245151, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b0898ba, org.springframework.security.web.context.SecurityContextHolderFilter@5645589f, org.springframework.security.web.header.HeaderWriterFilter@73352602, org.springframework.security.web.csrf.CsrfFilter@79fff217, org.springframework.security.web.authentication.logout.LogoutFilter@438de9a8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63de8733, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@cd7f425, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c7867f7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@74a59d60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50ac770a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5688ddc0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@746ea185, org.springframework.security.web.access.ExceptionTranslationFilter@1f0fa4d, org.springframework.security.web.access.intercept.AuthorizationFilter@6a7a5dc2]
+2023-08-23T11:27:25.532+05:30  INFO 17324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:27:25.564+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:27:25.573+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.681 seconds (process running for 1644.263)
+2023-08-23T11:27:25.575+05:30  INFO 17324 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:30:10.557+05:30  INFO 17324 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:30:10.580+05:30  INFO 17324 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:30:10.587+05:30  INFO 17324 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:30:10.588+05:30  INFO 17324 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-08-23T11:30:10.596+05:30  INFO 17324 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-08-23T11:30:10.740+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 17324 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:30:10.740+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:30:11.099+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:30:11.109+05:30  INFO 17324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:30:11.342+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:30:11.343+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:30:11.344+05:30  INFO 17324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:30:11.395+05:30  INFO 17324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:30:11.395+05:30  INFO 17324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 649 ms
+2023-08-23T11:30:11.509+05:30  INFO 17324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:30:11.526+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:30:11.527+05:30  INFO 17324 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:30:11.529+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-08-23T11:30:11.559+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d278512
+2023-08-23T11:30:11.559+05:30  INFO 17324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-08-23T11:30:11.654+05:30  INFO 17324 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:30:12.026+05:30  INFO 17324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:30:12.505+05:30  INFO 17324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:30:12.565+05:30  WARN 17324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:30:12.784+05:30  WARN 17324 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 17e49932-6961-43d9-8c71-1550882e0b05
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:30:12.808+05:30  INFO 17324 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3477fa68, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e8f300b, org.springframework.security.web.context.SecurityContextHolderFilter@7bd8fde9, org.springframework.security.web.header.HeaderWriterFilter@7bcf3992, org.springframework.security.web.csrf.CsrfFilter@26c25a73, org.springframework.security.web.authentication.logout.LogoutFilter@298fc25b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45aa745b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@33561a8c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@891972d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1260fbaf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f7d2123, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31d7b68d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d39a813, org.springframework.security.web.access.ExceptionTranslationFilter@7e40029b, org.springframework.security.web.access.intercept.AuthorizationFilter@26e19663]
+2023-08-23T11:30:12.818+05:30  INFO 17324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:30:12.836+05:30  INFO 17324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:30:12.856+05:30  INFO 17324 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 2.167 seconds (process running for 1811.546)
+2023-08-23T11:30:12.861+05:30  INFO 17324 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:30:21.910+05:30  INFO 17324 --- [RMI TCP Connection(49)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-08-23T11:30:21.932+05:30  INFO 17324 --- [RMI TCP Connection(49)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:30:21.938+05:30  INFO 17324 --- [RMI TCP Connection(49)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:30:21.939+05:30  INFO 17324 --- [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-08-23T11:30:21.949+05:30  INFO 17324 --- [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-08-23T11:35:53.608+05:30  INFO 11308 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11308 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:35:53.612+05:30  INFO 11308 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:35:53.716+05:30  INFO 11308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T11:35:53.717+05:30  INFO 11308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T11:35:54.666+05:30  INFO 11308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:35:54.702+05:30  INFO 11308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:35:55.771+05:30  INFO 11308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:35:55.786+05:30  INFO 11308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:35:55.787+05:30  INFO 11308 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:35:55.926+05:30  INFO 11308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:35:55.927+05:30  INFO 11308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2208 ms
+2023-08-23T11:35:56.127+05:30  INFO 11308 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:35:56.196+05:30  INFO 11308 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T11:35:56.199+05:30  INFO 11308 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T11:35:56.389+05:30  INFO 11308 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:35:56.592+05:30  INFO 11308 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:35:56.618+05:30  INFO 11308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T11:35:57.139+05:30  INFO 11308 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23c3557a
+2023-08-23T11:35:57.142+05:30  INFO 11308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T11:35:57.724+05:30 ERROR 11308 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.naishaairlines.models.Ticket.additionalPassengers' is 'mappedBy' a property named 'ticket' which does not exist in the target entity 'com.naishaairlines.models.AdditionalPassenger'
+2023-08-23T11:35:57.724+05:30  WARN 11308 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.naishaairlines.models.Ticket.additionalPassengers' is 'mappedBy' a property named 'ticket' which does not exist in the target entity 'com.naishaairlines.models.AdditionalPassenger'
+2023-08-23T11:35:57.726+05:30  INFO 11308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T11:35:57.743+05:30  INFO 11308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T11:35:57.747+05:30  INFO 11308 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:35:57.769+05:30  INFO 11308 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-23T11:35:57.809+05:30 ERROR 11308 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.naishaairlines.models.Ticket.additionalPassengers' is 'mappedBy' a property named 'ticket' which does not exist in the target entity 'com.naishaairlines.models.AdditionalPassenger'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at com.naishaairlines.NaishaAirlinesApplication.main(NaishaAirlinesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.hibernate.AnnotationException: Collection 'com.naishaairlines.models.Ticket.additionalPassengers' is 'mappedBy' a property named 'ticket' which does not exist in the target entity 'com.naishaairlines.models.AdditionalPassenger'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1568) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1582) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1543) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1534) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1857) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1814) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:328) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451) ~[hibernate-core-6.2.6.Final.jar:6.2.6.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 21 common frames omitted
+
+2023-08-23T11:39:18.012+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:39:18.019+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:39:18.161+05:30  INFO 11124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T11:39:18.162+05:30  INFO 11124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T11:39:19.401+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:39:19.446+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:39:20.762+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:39:20.790+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:39:20.791+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:39:20.980+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:39:20.981+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2818 ms
+2023-08-23T11:39:21.247+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:39:21.360+05:30  INFO 11124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T11:39:21.366+05:30  INFO 11124 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T11:39:21.596+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:39:21.862+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:39:21.901+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T11:39:22.522+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54aea6a5
+2023-08-23T11:39:22.526+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T11:39:23.196+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:39:25.191+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:39:27.145+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:39:27.293+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:39:28.323+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 62e07785-fb28-4c6b-8fe1-7e874035c334
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:39:28.567+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22dca757, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@179a556e, org.springframework.security.web.context.SecurityContextHolderFilter@43a2c9de, org.springframework.security.web.header.HeaderWriterFilter@23663709, org.springframework.security.web.csrf.CsrfFilter@3a6a368a, org.springframework.security.web.authentication.logout.LogoutFilter@675262ba, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@adb4189, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1d703b5f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@8c54a76, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@509cbde7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72e76362, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47fc8bbb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a77c35f, org.springframework.security.web.access.ExceptionTranslationFilter@5d11cdbb, org.springframework.security.web.access.intercept.AuthorizationFilter@3d9eb308]
+2023-08-23T11:39:28.654+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:39:28.751+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:39:28.776+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 11.649 seconds (process running for 12.847)
+2023-08-23T11:43:35.445+05:30  INFO 11124 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-08-23T11:43:35.463+05:30  INFO 11124 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:43:35.475+05:30  INFO 11124 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:43:35.479+05:30  INFO 11124 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T11:43:35.490+05:30  INFO 11124 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T11:43:35.604+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:43:35.605+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:43:35.869+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:43:35.874+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:43:36.014+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:43:36.015+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:43:36.016+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:43:36.046+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:43:36.047+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 437 ms
+2023-08-23T11:43:36.104+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:43:36.120+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:43:36.120+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:43:36.122+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-08-23T11:43:36.150+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21c5d59a
+2023-08-23T11:43:36.151+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-08-23T11:43:36.232+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:43:36.570+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:43:37.006+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:43:37.088+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:43:37.420+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a55190fa-355d-4b23-8238-b61c2d70bd19
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:43:37.455+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5668f2db, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@632ae9c, org.springframework.security.web.context.SecurityContextHolderFilter@36ab646b, org.springframework.security.web.header.HeaderWriterFilter@3579e275, org.springframework.security.web.csrf.CsrfFilter@5a1fd344, org.springframework.security.web.authentication.logout.LogoutFilter@58ced4d7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e754818, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4c019bf4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@20313ca, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18d6aaa2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@120a0409, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3611ad09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fad2a92, org.springframework.security.web.access.ExceptionTranslationFilter@6959acc5, org.springframework.security.web.access.intercept.AuthorizationFilter@376cecd6]
+2023-08-23T11:43:37.471+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:43:37.488+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:43:37.502+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.943 seconds (process running for 261.573)
+2023-08-23T11:43:37.513+05:30  INFO 11124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:44:11.437+05:30  INFO 11124 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:44:11.471+05:30  INFO 11124 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:44:11.482+05:30  INFO 11124 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:44:11.483+05:30  INFO 11124 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-08-23T11:44:11.503+05:30  INFO 11124 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-23T11:44:11.712+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:44:11.712+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:44:12.093+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:44:12.098+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:44:12.290+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:44:12.291+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:44:12.292+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:44:12.345+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:44:12.346+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 628 ms
+2023-08-23T11:44:12.512+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:44:12.530+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:44:12.530+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:44:12.532+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-23T11:44:12.590+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@772eb2a9
+2023-08-23T11:44:12.590+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-23T11:44:12.680+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:44:12.991+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:44:13.246+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:44:13.287+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:44:13.499+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 239be5b8-43a1-41a8-a603-57e1cd168023
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:44:13.545+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7da4e5d4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5826372e, org.springframework.security.web.context.SecurityContextHolderFilter@4d42cf50, org.springframework.security.web.header.HeaderWriterFilter@55b9b533, org.springframework.security.web.csrf.CsrfFilter@34793986, org.springframework.security.web.authentication.logout.LogoutFilter@4aa579ad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4102c15e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@72fc1e6b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@ff90545, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@200ba0c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@300a7a77, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a742e3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7209a9c8, org.springframework.security.web.access.ExceptionTranslationFilter@5751beab, org.springframework.security.web.access.intercept.AuthorizationFilter@1376da34]
+2023-08-23T11:44:13.597+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:44:13.642+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:44:13.678+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 2.041 seconds (process running for 297.75)
+2023-08-23T11:44:13.686+05:30  INFO 11124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:44:15.031+05:30  INFO 11124 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:44:15.063+05:30  INFO 11124 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:44:15.075+05:30  INFO 11124 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:44:15.076+05:30  INFO 11124 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-08-23T11:44:15.097+05:30  INFO 11124 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-08-23T11:44:15.308+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:44:15.309+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:44:15.614+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:44:15.617+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:44:15.728+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:44:15.729+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:44:15.730+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:44:15.770+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:44:15.770+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 458 ms
+2023-08-23T11:44:15.829+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:44:15.842+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:44:15.843+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:44:15.845+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-23T11:44:15.865+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@749e50ad
+2023-08-23T11:44:15.866+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-23T11:44:15.948+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:44:16.222+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:44:16.586+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:44:16.653+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:44:16.946+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 31675700-3de5-49f1-b825-e72ede169cd1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:44:16.981+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cb582af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39e32153, org.springframework.security.web.context.SecurityContextHolderFilter@20b71bcd, org.springframework.security.web.header.HeaderWriterFilter@555bf3, org.springframework.security.web.csrf.CsrfFilter@dd652ca, org.springframework.security.web.authentication.logout.LogoutFilter@25226b7d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@97f55c1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@60ae870b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4a41aaf3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3fb0be10, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fc85d13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a0ec77a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70bbdd95, org.springframework.security.web.access.ExceptionTranslationFilter@6b47da9a, org.springframework.security.web.access.intercept.AuthorizationFilter@da90745]
+2023-08-23T11:44:16.989+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:44:17.004+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:44:17.014+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.782 seconds (process running for 301.085)
+2023-08-23T11:44:17.016+05:30  INFO 11124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:45:32.318+05:30  INFO 11124 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:45:32.356+05:30  INFO 11124 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:45:32.370+05:30  INFO 11124 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:45:32.372+05:30  INFO 11124 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-08-23T11:45:32.388+05:30  INFO 11124 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-08-23T11:45:32.571+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:45:32.573+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:45:32.793+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:45:32.799+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:45:32.963+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:45:32.964+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:45:32.965+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:45:33.040+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:45:33.040+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 464 ms
+2023-08-23T11:45:33.157+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:45:33.175+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:45:33.175+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:45:33.177+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-08-23T11:45:33.196+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15d0ed8a
+2023-08-23T11:45:33.197+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-08-23T11:45:33.263+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:45:33.557+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:45:33.843+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:45:33.872+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:45:34.012+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 252fc62d-a248-4200-b2ee-7e5f63d9ebd7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:45:34.031+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72b45274, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69165e29, org.springframework.security.web.context.SecurityContextHolderFilter@1cf23832, org.springframework.security.web.header.HeaderWriterFilter@19623487, org.springframework.security.web.csrf.CsrfFilter@6a37b1b8, org.springframework.security.web.authentication.logout.LogoutFilter@40f1f371, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@34a3eaa, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7967bde1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3b7b92cf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4cef3fc9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b9ff065, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71a9695f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e5ff31e, org.springframework.security.web.access.ExceptionTranslationFilter@6f2aa4c5, org.springframework.security.web.access.intercept.AuthorizationFilter@3ee4aba0]
+2023-08-23T11:45:34.040+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:45:34.063+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:45:34.071+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.534 seconds (process running for 378.142)
+2023-08-23T11:45:34.074+05:30  INFO 11124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:45:35.500+05:30  INFO 11124 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:45:35.538+05:30  INFO 11124 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:45:35.553+05:30  INFO 11124 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:45:35.555+05:30  INFO 11124 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-08-23T11:45:35.572+05:30  INFO 11124 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-08-23T11:45:35.730+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:45:35.730+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:45:36.072+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:45:36.080+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:45:36.322+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:45:36.323+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:45:36.323+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:45:36.353+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:45:36.353+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 620 ms
+2023-08-23T11:45:36.421+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:45:36.435+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:45:36.435+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:45:36.438+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-08-23T11:45:36.462+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35c4499a
+2023-08-23T11:45:36.462+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-08-23T11:45:36.552+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:45:36.757+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:45:37.079+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:45:37.121+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:45:37.304+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ffa06d85-b837-4d4e-b9e7-d2c160116054
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:45:37.329+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27ded921, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d1aefa0, org.springframework.security.web.context.SecurityContextHolderFilter@c25690c, org.springframework.security.web.header.HeaderWriterFilter@2ffae748, org.springframework.security.web.csrf.CsrfFilter@1ac16cb4, org.springframework.security.web.authentication.logout.LogoutFilter@53132621, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f64343b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@695351bd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7311c1d4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@250c25d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d9000f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11eb346f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37f7188b, org.springframework.security.web.access.ExceptionTranslationFilter@2d34286d, org.springframework.security.web.access.intercept.AuthorizationFilter@683e4c06]
+2023-08-23T11:45:37.343+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:45:37.364+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:45:37.377+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.685 seconds (process running for 381.448)
+2023-08-23T11:45:37.381+05:30  INFO 11124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:46:38.281+05:30  INFO 11124 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:46:38.332+05:30  INFO 11124 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:46:38.345+05:30  INFO 11124 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:46:38.346+05:30  INFO 11124 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-08-23T11:46:38.356+05:30  INFO 11124 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-08-23T11:46:38.453+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 11124 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:46:38.454+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:46:38.664+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:46:38.670+05:30  INFO 11124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:46:38.787+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:46:38.788+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:46:38.788+05:30  INFO 11124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:46:38.811+05:30  INFO 11124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:46:38.811+05:30  INFO 11124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 355 ms
+2023-08-23T11:46:38.858+05:30  INFO 11124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:46:38.868+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:46:38.869+05:30  INFO 11124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:46:38.870+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-08-23T11:46:38.886+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cf1c538
+2023-08-23T11:46:38.886+05:30  INFO 11124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-08-23T11:46:38.934+05:30  INFO 11124 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:46:39.121+05:30  INFO 11124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:46:39.354+05:30  INFO 11124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:46:39.376+05:30  WARN 11124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:46:39.492+05:30  WARN 11124 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b5861b17-fa17-4f05-8458-92aa3a2f3696
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:46:39.508+05:30  INFO 11124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b22ff90, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5997547e, org.springframework.security.web.context.SecurityContextHolderFilter@30fadfbd, org.springframework.security.web.header.HeaderWriterFilter@1011953a, org.springframework.security.web.csrf.CsrfFilter@2481660, org.springframework.security.web.authentication.logout.LogoutFilter@3e1742b8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1983c1e2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@33781fae, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e1c027f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1d0542e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@724334d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f5ce73a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69b91956, org.springframework.security.web.access.ExceptionTranslationFilter@7fb5739, org.springframework.security.web.access.intercept.AuthorizationFilter@54ce361]
+2023-08-23T11:46:39.517+05:30  INFO 11124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:46:39.532+05:30  INFO 11124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:46:39.541+05:30  INFO 11124 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.115 seconds (process running for 443.613)
+2023-08-23T11:46:39.546+05:30  INFO 11124 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:46:40.239+05:30  INFO 11124 --- [RMI TCP Connection(29)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-08-23T11:46:40.275+05:30  INFO 11124 --- [RMI TCP Connection(29)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:46:40.290+05:30  INFO 11124 --- [RMI TCP Connection(29)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:46:40.292+05:30  INFO 11124 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-08-23T11:46:40.314+05:30  INFO 11124 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-08-23T11:49:32.959+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 14360 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:49:32.963+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:49:33.044+05:30  INFO 14360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23T11:49:33.044+05:30  INFO 14360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23T11:49:34.432+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:49:34.489+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:49:35.574+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:49:35.587+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:49:35.587+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:49:35.675+05:30  INFO 14360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:49:35.676+05:30  INFO 14360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2631 ms
+2023-08-23T11:49:35.902+05:30  INFO 14360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:49:35.969+05:30  INFO 14360 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-23T11:49:35.972+05:30  INFO 14360 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-23T11:49:36.154+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:49:36.383+05:30  INFO 14360 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:49:36.415+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23T11:49:36.967+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f91bcf0
+2023-08-23T11:49:36.971+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23T11:49:37.587+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:49:39.241+05:30  INFO 14360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:49:39.650+05:30  INFO 14360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:49:39.760+05:30  WARN 14360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:49:40.538+05:30  WARN 14360 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f1ba79fe-2b99-4420-b152-33e6779ff924
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:49:40.789+05:30  INFO 14360 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5215695a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cded933, org.springframework.security.web.context.SecurityContextHolderFilter@167b06ff, org.springframework.security.web.header.HeaderWriterFilter@59ea9c3a, org.springframework.security.web.csrf.CsrfFilter@72e76362, org.springframework.security.web.authentication.logout.LogoutFilter@179a556e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@65ef59a3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a8baf35, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1c397c18, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36ed0f04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73b5f3d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ba53efa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54b3c6f1, org.springframework.security.web.access.ExceptionTranslationFilter@2c1eccf1, org.springframework.security.web.access.intercept.AuthorizationFilter@3e68e61]
+2023-08-23T11:49:40.894+05:30  INFO 14360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:49:40.971+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:49:40.985+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 8.899 seconds (process running for 10.035)
+2023-08-23T11:51:17.413+05:30  INFO 14360 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:51:17.459+05:30  INFO 14360 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:51:17.486+05:30  INFO 14360 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:51:17.495+05:30  INFO 14360 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23T11:51:17.525+05:30  INFO 14360 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23T11:51:17.935+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 14360 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:51:17.948+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:51:18.494+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:51:18.498+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:51:18.626+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:51:18.627+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:51:18.628+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:51:18.654+05:30  INFO 14360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:51:18.654+05:30  INFO 14360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 697 ms
+2023-08-23T11:51:18.717+05:30  INFO 14360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:51:18.727+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:51:18.727+05:30  INFO 14360 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:51:18.728+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-08-23T11:51:18.748+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c023206
+2023-08-23T11:51:18.748+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-08-23T11:51:18.835+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:51:19.256+05:30  INFO 14360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:51:19.644+05:30  INFO 14360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:51:19.682+05:30  WARN 14360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:51:20.023+05:30  WARN 14360 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6d6fc1d4-3dce-4ccc-a41b-d27e7caacf65
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:51:20.076+05:30  INFO 14360 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f5f3b8d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cd1edb, org.springframework.security.web.context.SecurityContextHolderFilter@3f35aa61, org.springframework.security.web.header.HeaderWriterFilter@18db5c6f, org.springframework.security.web.csrf.CsrfFilter@834004b, org.springframework.security.web.authentication.logout.LogoutFilter@6f6eafc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1a5afd13, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5dfce896, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4b32c974, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b4a45ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@172bd394, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f06f73d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@322c9289, org.springframework.security.web.access.ExceptionTranslationFilter@53fb6bdf, org.springframework.security.web.access.intercept.AuthorizationFilter@14e3af02]
+2023-08-23T11:51:20.112+05:30  INFO 14360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:51:20.132+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:51:20.140+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 2.479 seconds (process running for 109.191)
+2023-08-23T11:51:20.148+05:30  INFO 14360 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:51:45.069+05:30  INFO 14360 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:51:45.102+05:30  INFO 14360 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:51:45.114+05:30  INFO 14360 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:51:45.116+05:30  INFO 14360 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-08-23T11:51:45.131+05:30  INFO 14360 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-23T11:51:45.319+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 14360 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:51:45.320+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:51:45.668+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:51:45.675+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:51:45.869+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:51:45.870+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:51:45.870+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:51:45.915+05:30  INFO 14360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:51:45.915+05:30  INFO 14360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2023-08-23T11:51:45.983+05:30  INFO 14360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:51:45.997+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:51:45.997+05:30  INFO 14360 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:51:45.998+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-23T11:51:46.019+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e4609e
+2023-08-23T11:51:46.020+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-23T11:51:46.078+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:51:46.292+05:30  INFO 14360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:51:46.516+05:30  INFO 14360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:51:46.540+05:30  WARN 14360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:51:46.716+05:30  WARN 14360 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ee86256d-a042-47e5-8794-694256496e0f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:51:46.737+05:30  INFO 14360 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1aee6e8b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@142341e1, org.springframework.security.web.context.SecurityContextHolderFilter@6c6574d3, org.springframework.security.web.header.HeaderWriterFilter@8505c58, org.springframework.security.web.csrf.CsrfFilter@1fa09780, org.springframework.security.web.authentication.logout.LogoutFilter@2c396b27, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6293e887, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@bad0e12, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@69894432, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@514c7a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77e2e248, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11530f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a03af6d, org.springframework.security.web.access.ExceptionTranslationFilter@1fad359d, org.springframework.security.web.access.intercept.AuthorizationFilter@67bd2fd8]
+2023-08-23T11:51:46.753+05:30  INFO 14360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:51:46.775+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:51:46.786+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.525 seconds (process running for 135.837)
+2023-08-23T11:51:46.789+05:30  INFO 14360 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:52:25.796+05:30  INFO 14360 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-23T11:52:25.827+05:30  INFO 14360 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:52:25.838+05:30  INFO 14360 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:52:25.840+05:30  INFO 14360 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-08-23T11:52:25.854+05:30  INFO 14360 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-08-23T11:52:26.016+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 14360 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-23T11:52:26.017+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-23T11:52:26.206+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23T11:52:26.211+05:30  INFO 14360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2023-08-23T11:52:26.334+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-23T11:52:26.335+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23T11:52:26.335+05:30  INFO 14360 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-23T11:52:26.366+05:30  INFO 14360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23T11:52:26.367+05:30  INFO 14360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 348 ms
+2023-08-23T11:52:26.423+05:30  INFO 14360 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23T11:52:26.435+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:52:26.435+05:30  INFO 14360 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-23T11:52:26.436+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-23T11:52:26.451+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d48c843
+2023-08-23T11:52:26.452+05:30  INFO 14360 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-23T11:52:26.502+05:30  INFO 14360 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-23T11:52:26.708+05:30  INFO 14360 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23T11:52:26.969+05:30  INFO 14360 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:52:27.005+05:30  WARN 14360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23T11:52:27.202+05:30  WARN 14360 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f6fdd6e1-467d-4dd6-aceb-e73c831ed9db
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-23T11:52:27.224+05:30  INFO 14360 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@224fdf93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d86b5fe, org.springframework.security.web.context.SecurityContextHolderFilter@5db227b3, org.springframework.security.web.header.HeaderWriterFilter@67f5fa6d, org.springframework.security.web.csrf.CsrfFilter@39d8fcfc, org.springframework.security.web.authentication.logout.LogoutFilter@4ff53aaa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@12ac945d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3881b8ec, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b7edc6f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@74eaccc8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23f30fe5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70ef120e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@950d944, org.springframework.security.web.access.ExceptionTranslationFilter@3dbdce43, org.springframework.security.web.access.intercept.AuthorizationFilter@72f1a8ec]
+2023-08-23T11:52:27.242+05:30  INFO 14360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23T11:52:27.261+05:30  INFO 14360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-23T11:52:27.274+05:30  INFO 14360 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.292 seconds (process running for 176.324)
+2023-08-23T11:52:27.277+05:30  INFO 14360 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-23T11:52:35.039+05:30  INFO 14360 --- [RMI TCP Connection(20)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-08-23T11:52:35.071+05:30  INFO 14360 --- [RMI TCP Connection(20)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-23T11:52:35.084+05:30  INFO 14360 --- [RMI TCP Connection(20)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23T11:52:35.086+05:30  INFO 14360 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-08-23T11:52:35.102+05:30  INFO 14360 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.

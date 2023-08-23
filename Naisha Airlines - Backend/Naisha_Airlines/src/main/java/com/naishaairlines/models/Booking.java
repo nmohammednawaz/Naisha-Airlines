@@ -1,6 +1,7 @@
 package com.naishaairlines.models;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -10,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -29,6 +31,10 @@ public class Booking {
     @JoinColumn(name = "passenger_id")
     @NotNull(message = "Passenger is required")
     private Passenger passenger;
+    
+    @OneToMany(mappedBy = "booking")
+    @JsonIgnore
+    private List<AdditionalPassenger> additionalPassengers;
     
     @ManyToOne
     @JoinColumn(name = "flight_number")
@@ -60,13 +66,14 @@ public class Booking {
     private String bookingStatus;
 
 	public Booking(@NotNull(message = "Passenger is required") Passenger passenger,
-			@NotNull(message = "Flight is required") Flight flight, @NotNull(message = "Seat is required") Seat seat,
-			Ticket ticket, Payment payment, Feedback feedback,
+			List<AdditionalPassenger> additionalPassengers, @NotNull(message = "Flight is required") Flight flight,
+			@NotNull(message = "Seat is required") Seat seat, Ticket ticket, Payment payment, Feedback feedback,
 			@NotNull(message = "Booked on date is required") LocalDate bookedOn,
 			@NotNull(message = "Booking date is required") LocalDate bookingDate,
 			@NotBlank(message = "Booking status is required") String bookingStatus) {
 		super();
 		this.passenger = passenger;
+		this.additionalPassengers = additionalPassengers;
 		this.flight = flight;
 		this.seat = seat;
 		this.ticket = ticket;
@@ -76,7 +83,8 @@ public class Booking {
 		this.bookingDate = bookingDate;
 		this.bookingStatus = bookingStatus;
 	}
-    
+
+	
     
  
 }
