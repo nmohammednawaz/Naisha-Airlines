@@ -3,6 +3,7 @@ package com.naishaairlines.models;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +22,7 @@ public class Airport {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	private Integer airportId;
 	
 	@NotBlank(message = "Airport code is required")
@@ -53,7 +55,6 @@ public class Airport {
 		this.departingFlights = departingFlights;
 		this.arrivingFlights = arrivingFlights;
 	}
-    
-    
+
 
 }

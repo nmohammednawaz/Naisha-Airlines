@@ -1,6 +1,9 @@
 package com.naishaairlines.models;
 
+
 import org.hibernate.validator.constraints.Length;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +24,7 @@ public class Feedback {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer feedbackId;
     
     @OneToOne
@@ -43,6 +47,7 @@ public class Feedback {
 		this.rating = rating;
 		this.comments = comments;
 	}
+    
     
     
 }
