@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.naishaairlines.configurations.PasswordEncoderConfig;
 import com.naishaairlines.exceptions.DuplicateDataException;
@@ -12,6 +13,7 @@ import com.naishaairlines.models.Admin;
 import com.naishaairlines.repository.AdminRepository;
 import com.naishaairlines.service.AdminServices;
 
+@Service
 public class AdminServiceImplements implements AdminServices {
 	
 	@Autowired
@@ -20,7 +22,7 @@ public class AdminServiceImplements implements AdminServices {
 	@Autowired
 	private AdminRepository adminRepository;
 	
-	public void checkDuplicate(String emailId, String username, String contactNumber) throws DuplicateDataException {
+	private void checkDuplicate(String emailId, String username, String contactNumber) throws DuplicateDataException {
 		if(adminRepository.existsByEmail(emailId)) {
 			throw new DuplicateDataException("Dear User, Email Id Already Registered");
 		}

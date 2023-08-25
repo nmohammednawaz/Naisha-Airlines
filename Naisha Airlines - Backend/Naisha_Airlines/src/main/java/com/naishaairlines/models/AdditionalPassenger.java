@@ -1,5 +1,8 @@
 package com.naishaairlines.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +22,7 @@ public class AdditionalPassenger {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	private Integer additionalPassengerId;
 	
     @NotBlank(message = "First name is required")
@@ -35,9 +39,11 @@ public class AdditionalPassenger {
     
     @ManyToOne
     @JoinColumn(name = "booking_id")
+    @JsonIgnore
     private Booking booking;
     
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 
@@ -54,9 +60,6 @@ public class AdditionalPassenger {
 		this.booking = booking;
 		this.ticket = ticket;
 	}
-
-	
-    
-    
+  
 	
 }
