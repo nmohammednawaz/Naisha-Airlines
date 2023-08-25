@@ -1,5 +1,6 @@
 package com.naishaairlines.models;
 
+
 import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -46,6 +47,7 @@ public class Feedback {
 		this.rating = rating;
 		this.comments = comments;
 	}
+    
     
     
 }

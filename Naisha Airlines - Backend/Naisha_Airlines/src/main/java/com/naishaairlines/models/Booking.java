@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -30,33 +31,26 @@ public class Booking {
     private Integer bookingId;
     
     @ManyToOne
+    @JoinColumn(name = "flight_id")
+    @NotNull(message = "Flight is required")
+    private Flight flight;
+    
+    @NotNull(message = "PNR is required")
+    private String pnrNumber;
+    
+    @ManyToOne
     @JoinColumn(name = "passenger_id")
     @NotNull(message = "Passenger is required")
     private Passenger passenger;
     
-    @OneToMany(mappedBy = "booking")
+    @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<AdditionalPassenger> additionalPassengers;
     
-    @ManyToOne
-    @JoinColumn(name = "flight_number")
-    @NotNull(message = "Flight is required")
-    private Flight flight;
-    
     @OneToOne
-    @JoinColumn(name = "seat_number")
-    @NotNull(message = "Seat is required")
-    private Seat seat;
-    
-    @OneToOne(mappedBy = "booking")
-    private Ticket ticket;
-    
-    @OneToOne(mappedBy = "booking")
-    private Payment payment;
-    
-    @OneToOne(mappedBy = "booking")
+    @JoinColumn(name = "passenger_seat_number")
     @JsonIgnore
-    private Feedback feedback;
+    private Seat seat;
     
     @NotNull(message = "Booked on date is required")
     private LocalDate bookedOn;
@@ -66,27 +60,39 @@ public class Booking {
     
     @NotBlank(message = "Booking status is required")
     private String bookingStatus;
+    
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Ticket ticket;
+    
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Payment payment;
+    
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Feedback feedback;
 
-	public Booking(@NotNull(message = "Passenger is required") Passenger passenger,
-			List<AdditionalPassenger> additionalPassengers, @NotNull(message = "Flight is required") Flight flight,
-			@NotNull(message = "Seat is required") Seat seat, Ticket ticket, Payment payment, Feedback feedback,
+	public Booking(@NotNull(message = "Flight is required") Flight flight,
+			@NotNull(message = "PNR is required") String pnrNumber,
+			@NotNull(message = "Passenger is required") Passenger passenger,
+			List<AdditionalPassenger> additionalPassengers, Seat seat,
 			@NotNull(message = "Booked on date is required") LocalDate bookedOn,
 			@NotNull(message = "Booking date is required") LocalDate bookingDate,
-			@NotBlank(message = "Booking status is required") String bookingStatus) {
+			@NotBlank(message = "Booking status is required") String bookingStatus, Ticket ticket, Payment payment,
+			Feedback feedback) {
 		super();
+		this.flight = flight;
+		this.pnrNumber = pnrNumber;
 		this.passenger = passenger;
 		this.additionalPassengers = additionalPassengers;
-		this.flight = flight;
 		this.seat = seat;
-		this.ticket = ticket;
-		this.payment = payment;
-		this.feedback = feedback;
 		this.bookedOn = bookedOn;
 		this.bookingDate = bookingDate;
 		this.bookingStatus = bookingStatus;
+		this.ticket = ticket;
+		this.payment = payment;
+		this.feedback = feedback;
 	}
-
-	
-    
  
 }

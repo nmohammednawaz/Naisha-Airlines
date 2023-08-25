@@ -80,5 +80,5 @@ public class Admin {
 		this.role = role;
 		this.isActive = isActive;
 	}
-
+    
 }

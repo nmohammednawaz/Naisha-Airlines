@@ -23,7 +23,7 @@ public class AdminServiceImplements implements AdminServices {
 	private AdminRepository adminRepository;
 	
 	private void checkDuplicate(String emailId, String username, String contactNumber) throws DuplicateDataException {
-		if(adminRepository.existsByEmail(emailId)) {
+		if(adminRepository.existsByEmailId(emailId)) {
 			throw new DuplicateDataException("Dear User, Email Id Already Registered");
 		}
 		if(adminRepository.existsByUsername(username)) {

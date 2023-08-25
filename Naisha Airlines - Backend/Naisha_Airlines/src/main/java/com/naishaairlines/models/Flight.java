@@ -93,7 +93,6 @@ public class Flight {
 		this.bookings = bookings;
 		this.isDeleted = isDeleted;
 	}
-
     
-    
+ 
 }

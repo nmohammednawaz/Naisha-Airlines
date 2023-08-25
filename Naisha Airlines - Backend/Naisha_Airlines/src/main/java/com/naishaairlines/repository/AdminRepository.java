@@ -8,7 +8,7 @@ import com.naishaairlines.models.Admin;
 
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
 	
-	boolean existsByEmail(String email);
+	boolean existsByEmailId(String email);
     boolean existsByUsername(String username);
     boolean existsByContactNumber(String contactNumber);
 	Optional<Admin> findByUsername(String username);

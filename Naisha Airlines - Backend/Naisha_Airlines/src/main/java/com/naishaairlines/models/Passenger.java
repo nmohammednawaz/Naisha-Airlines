@@ -62,8 +62,7 @@ public class Passenger {
     @Column(unique = true)
     private String contactNumber;
     
-    @Pattern(regexp = "^(Admin|User)$", message = "Invalid role")
-    private String role;
+    private String role = "User";
     
     @NotNull(message = "isActive field must not be null")
     private boolean isActive;
@@ -83,8 +82,7 @@ public class Passenger {
 			@Email(message = "Invalid email format") @NotBlank(message = "Email is required") String emailId,
 			@NotBlank(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
-			@NotBlank(message = "Contact number is required") String contactNumber,
-			@Pattern(regexp = "^(Admin|User)$", message = "Invalid role") String role,
+			@NotBlank(message = "Contact number is required") String contactNumber, String role,
 			@NotNull(message = "isActive field must not be null") boolean isActive, List<Booking> bookings,
 			List<Payment> payments) {
 		super();
@@ -101,6 +99,6 @@ public class Passenger {
 		this.bookings = bookings;
 		this.payments = payments;
 	}
- 
+
     
 }
