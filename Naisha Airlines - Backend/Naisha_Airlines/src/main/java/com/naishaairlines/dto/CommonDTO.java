@@ -13,7 +13,7 @@ public class CommonDTO<T> {
 	private List<T> list;
 	private int pageSize;
 	private int pageNumber;
-	private int totalelements;
+	private Long totalElements;
 	private int totalPages;
 	private boolean isLastPage;
 }
