@@ -54,8 +54,8 @@ public class Admin {
     @Column(unique = true)
     private String contactNumber;
     
-    @Pattern(regexp = "^(Admin|User)$", message = "Invalid role")
-    private String role;
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private String role = "ADMIN";
     
     @NotNull(message = "isActive field must not be null")
     private boolean isActive;
@@ -67,7 +67,6 @@ public class Admin {
 			@NotBlank(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
 			@NotBlank(message = "Contact number is required") String contactNumber,
-			@Pattern(regexp = "^(Admin|User)$", message = "Invalid role") String role,
 			@NotNull(message = "isActive field must not be null") boolean isActive) {
 		super();
 		this.firstName = firstName;
@@ -77,7 +76,6 @@ public class Admin {
 		this.username = username;
 		this.password = password;
 		this.contactNumber = contactNumber;
-		this.role = role;
 		this.isActive = isActive;
 	}
     
