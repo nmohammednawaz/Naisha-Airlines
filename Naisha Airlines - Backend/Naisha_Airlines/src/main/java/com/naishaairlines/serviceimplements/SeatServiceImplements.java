@@ -2,11 +2,14 @@ package com.naishaairlines.serviceimplements;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Seat;
 import com.naishaairlines.service.SeatServices;
 
+@Service
 public class SeatServiceImplements implements SeatServices {
 
 	@Override
@@ -26,5 +29,24 @@ public class SeatServiceImplements implements SeatServices {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Seat> viewSeatByFlight(Integer flightId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Seat viewSeatByBookingId(Integer bookingId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Seat viewSeatByAdditionalPassengerId(Integer addtionalPassengerId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

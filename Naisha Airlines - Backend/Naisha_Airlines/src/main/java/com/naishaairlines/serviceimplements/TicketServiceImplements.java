@@ -1,9 +1,13 @@
 package com.naishaairlines.serviceimplements;
 
+
+import org.springframework.stereotype.Service;
+
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Ticket;
 import com.naishaairlines.service.TicketServices;
 
+@Service
 public class TicketServiceImplements implements TicketServices {
 
 	@Override
@@ -24,4 +28,17 @@ public class TicketServiceImplements implements TicketServices {
 		return null;
 	}
 
+	@Override
+	public Ticket viewTiketByBookingId(Integer bookingId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ticket viewTicketByPaymentId(Integer paymentId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import com.naishaairlines.configurations.PasswordEncoderConfig;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Admin;
@@ -17,7 +16,7 @@ import com.naishaairlines.service.AdminServices;
 public class AdminServiceImplements implements AdminServices {
 	
 	@Autowired
-	private PasswordEncoderConfig passwordEncoderConfig;
+	private PasswordEncoder passwordEncoder;
 	
 	@Autowired
 	private AdminRepository adminRepository;
@@ -39,7 +38,7 @@ public class AdminServiceImplements implements AdminServices {
 		
 		checkDuplicate(admin.getEmailId(), admin.getUsername(), admin.getContactNumber());
 		
-		admin.setPassword(passwordEncoderConfig.passwordEncoder().encode(admin.getPassword()));
+		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
 		return adminRepository.save(admin);
 	}
 

@@ -1,9 +1,12 @@
 package com.naishaairlines.serviceimplements;
 
+import org.springframework.stereotype.Service;
+
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.AdditionalPassenger;
 import com.naishaairlines.service.AdditionalPassengerServices;
 
+@Service
 public class AdditionalPassengerServiceImplements implements AdditionalPassengerServices {
 
 	@Override
@@ -24,5 +27,7 @@ public class AdditionalPassengerServiceImplements implements AdditionalPassenger
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

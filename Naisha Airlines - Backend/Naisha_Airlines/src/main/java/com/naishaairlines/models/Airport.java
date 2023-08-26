@@ -5,6 +5,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,9 +28,11 @@ public class Airport {
 	
 	@NotBlank(message = "Airport code is required")
     @Size(max = 3, message = "Airport code cannot exceed 3 characters")
+	@Column(unique = true)
     private String airportCode;
     
     @NotBlank(message = "Name is required")
+    @Column(unique = true)
     private String name;
     
     @NotBlank(message = "Location is required")

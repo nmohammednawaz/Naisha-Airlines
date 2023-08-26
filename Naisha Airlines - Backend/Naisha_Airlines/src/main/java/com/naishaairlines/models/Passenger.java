@@ -62,7 +62,8 @@ public class Passenger {
     @Column(unique = true)
     private String contactNumber;
     
-    private String role = "User";
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private String role = "PASSENGER";
     
     @NotNull(message = "isActive field must not be null")
     private boolean isActive;
@@ -82,7 +83,7 @@ public class Passenger {
 			@Email(message = "Invalid email format") @NotBlank(message = "Email is required") String emailId,
 			@NotBlank(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
 			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
-			@NotBlank(message = "Contact number is required") String contactNumber, String role,
+			@NotBlank(message = "Contact number is required") String contactNumber,
 			@NotNull(message = "isActive field must not be null") boolean isActive, List<Booking> bookings,
 			List<Payment> payments) {
 		super();
@@ -94,11 +95,9 @@ public class Passenger {
 		this.username = username;
 		this.password = password;
 		this.contactNumber = contactNumber;
-		this.role = role;
 		this.isActive = isActive;
 		this.bookings = bookings;
 		this.payments = payments;
 	}
-
     
 }
