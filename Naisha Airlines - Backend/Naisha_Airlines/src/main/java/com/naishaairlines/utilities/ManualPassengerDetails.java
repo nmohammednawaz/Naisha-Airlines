@@ -10,9 +10,6 @@ import com.naishaairlines.models.Passenger;
 
 public class ManualPassengerDetails implements UserDetails {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	private Passenger passenger;

@@ -10,9 +10,6 @@ import com.naishaairlines.models.Admin;
 
 public class ManualAdminDetails implements UserDetails {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private Admin admin;
 
