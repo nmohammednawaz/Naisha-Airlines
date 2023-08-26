@@ -30,6 +30,12 @@ public class AirportServiceImplements implements AirportServices {
 	}
 
 	@Override
+	public Airport findAirportByName(String name) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public List<Airport> viewAllAirports() throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;
@@ -60,4 +66,5 @@ public class AirportServiceImplements implements AirportServices {
 		return null;
 	}
 
+	
 }

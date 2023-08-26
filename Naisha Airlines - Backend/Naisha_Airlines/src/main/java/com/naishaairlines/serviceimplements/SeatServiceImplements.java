@@ -27,4 +27,23 @@ public class SeatServiceImplements implements SeatServices {
 		return null;
 	}
 
+	@Override
+	public List<Seat> viewSeatByFlight(Integer flightId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Seat viewSeatByBookingId(Integer bookingId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Seat viewSeatByAdditionalPassengerId(Integer addtionalPassengerId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }

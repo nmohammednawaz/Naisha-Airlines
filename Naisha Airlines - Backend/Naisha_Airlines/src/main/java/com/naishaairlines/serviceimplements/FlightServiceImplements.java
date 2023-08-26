@@ -5,7 +5,6 @@ import java.util.List;
 import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
-import com.naishaairlines.models.Booking;
 import com.naishaairlines.models.Flight;
 import com.naishaairlines.service.FlightServices;
 
@@ -36,7 +35,19 @@ public class FlightServiceImplements implements FlightServices {
 	}
 
 	@Override
-	public List<Flight> findFlightByLocation(String location) throws NoDataFoundException {
+	public Flight viewFlightByNumber(String flightNumber) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Flight> findFlightByDepartureLocation(String departureLocation) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Flight> findFlightByArrivalLocation(String arrivalLocation) throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -66,17 +77,5 @@ public class FlightServiceImplements implements FlightServices {
 		return null;
 	}
 
-	@Override
-	public List<Booking> viewAllBookings(Integer flightId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CommonDTO<Booking> viewAllBookings(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
-			throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 }

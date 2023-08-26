@@ -24,4 +24,17 @@ public class TicketServiceImplements implements TicketServices {
 		return null;
 	}
 
+	@Override
+	public Ticket viewTiketByBookingId(Integer bookingId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ticket viewTicketByPaymentId(Integer paymentId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

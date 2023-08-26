@@ -1,5 +1,7 @@
 package com.naishaairlines.serviceimplements;
 
+import java.util.List;
+
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Payment;
 import com.naishaairlines.service.PaymentServices;
@@ -23,5 +25,19 @@ public class PaymentServiceImplements implements PaymentServices {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Payment> viewPaymentByPassengerId(Integer passengerId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Payment viewPaymentByBookingId(Integer BookingId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 
 }

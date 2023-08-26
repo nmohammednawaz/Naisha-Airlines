@@ -126,3 +126,41 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:100) ~[spring-data-jpa-3.1.2.jar:3.1.2]
 	... 51 common frames omitted
 
+2023-08-25T22:02:49.661+05:30  INFO 16512 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 16512 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-08-25T22:02:49.664+05:30  INFO 16512 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-08-25T22:02:49.731+05:30  INFO 16512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-25T22:02:49.731+05:30  INFO 16512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-25T22:02:50.544+05:30  INFO 16512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-25T22:02:50.664+05:30  INFO 16512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 10 JPA repository interfaces.
+2023-08-25T22:02:51.424+05:30  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-08-25T22:02:51.438+05:30  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-25T22:02:51.438+05:30  INFO 16512 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-25T22:02:51.536+05:30  INFO 16512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-25T22:02:51.536+05:30  INFO 16512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1804 ms
+2023-08-25T22:02:51.740+05:30  INFO 16512 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-25T22:02:51.819+05:30  INFO 16512 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-25T22:02:51.822+05:30  INFO 16512 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-25T22:02:51.993+05:30  INFO 16512 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T22:02:52.163+05:30  INFO 16512 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-25T22:02:52.184+05:30  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-25T22:02:52.591+05:30  INFO 16512 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46ac173d
+2023-08-25T22:02:52.594+05:30  INFO 16512 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-25T22:02:53.129+05:30  INFO 16512 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T22:02:54.388+05:30  INFO 16512 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-25T22:02:55.670+05:30  INFO 16512 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T22:02:56.537+05:30  WARN 16512 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-25T22:02:57.196+05:30  WARN 16512 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8d67f3f4-b159-4c1b-9319-2ae968206087
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-08-25T22:02:57.356+05:30  INFO 16512 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a48a0f6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69981927, org.springframework.security.web.context.SecurityContextHolderFilter@52e5c349, org.springframework.security.web.header.HeaderWriterFilter@130e04b5, org.springframework.security.web.csrf.CsrfFilter@6c2be279, org.springframework.security.web.authentication.logout.LogoutFilter@1675524c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1904ae78, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3d4bb330, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3b42e932, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@732c1ded, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@167494a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21e84784, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43af5c75, org.springframework.security.web.access.ExceptionTranslationFilter@6cc24e55, org.springframework.security.web.access.intercept.AuthorizationFilter@6699c406]
+2023-08-25T22:02:57.410+05:30  INFO 16512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-25T22:02:57.465+05:30  INFO 16512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-08-25T22:02:57.477+05:30  INFO 16512 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 8.371 seconds (process running for 9.553)
+2023-08-25T22:15:00.195+05:30  INFO 16512 --- [RMI TCP Connection(20)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-08-25T22:15:00.215+05:30  INFO 16512 --- [RMI TCP Connection(20)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-25T22:15:00.228+05:30  INFO 16512 --- [RMI TCP Connection(20)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T22:15:00.234+05:30  INFO 16512 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-25T22:15:00.250+05:30  INFO 16512 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
