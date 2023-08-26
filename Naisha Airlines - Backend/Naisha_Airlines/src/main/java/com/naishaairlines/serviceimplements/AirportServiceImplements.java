@@ -2,6 +2,8 @@ package com.naishaairlines.serviceimplements;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
@@ -9,6 +11,7 @@ import com.naishaairlines.models.Airport;
 import com.naishaairlines.models.Flight;
 import com.naishaairlines.service.AirportServices;
 
+@Service
 public class AirportServiceImplements implements AirportServices {
 
 	@Override

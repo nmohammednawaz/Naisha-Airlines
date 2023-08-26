@@ -1,9 +1,13 @@
 package com.naishaairlines.serviceimplements;
 
+
+import org.springframework.stereotype.Service;
+
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Ticket;
 import com.naishaairlines.service.TicketServices;
 
+@Service
 public class TicketServiceImplements implements TicketServices {
 
 	@Override

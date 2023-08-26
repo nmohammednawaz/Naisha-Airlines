@@ -1,9 +1,12 @@
 package com.naishaairlines.serviceimplements;
 
+import org.springframework.stereotype.Service;
+
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Feedback;
 import com.naishaairlines.service.FeedbackServices;
 
+@Service
 public class FeedbackServiceImplements implements FeedbackServices {
 
 	@Override
