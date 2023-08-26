@@ -48,7 +48,7 @@ public class JwtTokenValidator extends OncePerRequestFilter {
 	    String servletPath = request.getServletPath();
 	    return (
 	        servletPath.equals("/passengers/signIn") ||
-	        servletPath.equals("/admin/signIn")   
+	        servletPath.equals("/admins/signIn")   
 	    );
 	}
 	

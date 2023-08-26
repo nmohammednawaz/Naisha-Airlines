@@ -9,8 +9,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
@@ -24,7 +22,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class Configurations {
 
     @Bean
-    SecurityFilterChain configuration(HttpSecurity http) throws Exception {
+    public SecurityFilterChain configuration(HttpSecurity http) throws Exception {
 
 		http.sessionManagement(se -> se.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).cors(cors -> {
 			cors.configurationSource(new org.springframework.web.cors.CorsConfigurationSource() {
@@ -41,10 +39,10 @@ public class Configurations {
 				}
 			});
 		}).authorizeHttpRequests(auth -> auth
-				.requestMatchers(HttpMethod.POST, "/users/", "/admin/").permitAll()
+				.requestMatchers(HttpMethod.POST, "/passengers/register", "/admins/register").permitAll()
 				.requestMatchers("/swagger-ui*/**", "/v3/api-docs/**").permitAll()
 				.requestMatchers("/passengers/**").hasRole("PASSENGER")
-				.requestMatchers("/admin/**").hasRole("ADMIN")
+				.requestMatchers("/admins/**").hasRole("ADMIN")
 				.anyRequest().authenticated()).csrf(csrf -> csrf.disable())
 				.addFilterAfter(new JwtTokenGenerator(), BasicAuthenticationFilter.class)
 				.addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
@@ -53,10 +51,5 @@ public class Configurations {
 		return http.build();
 	}
 
-
-    @Bean
-    PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
 
 }

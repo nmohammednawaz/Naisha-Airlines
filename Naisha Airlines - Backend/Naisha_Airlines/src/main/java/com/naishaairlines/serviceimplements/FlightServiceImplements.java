@@ -8,8 +8,10 @@ import org.springframework.stereotype.Service;
 import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
+import com.naishaairlines.models.Airport;
 import com.naishaairlines.models.Flight;
 import com.naishaairlines.repository.FlightRepository;
+import com.naishaairlines.service.AirportServices;
 import com.naishaairlines.service.FlightServices;
 
 @Service
@@ -17,6 +19,9 @@ public class FlightServiceImplements implements FlightServices {
 	
 	@Autowired
 	private FlightRepository flightRepository;
+	
+	@Autowired
+	private AirportServices airportServices;
 
 	@Override
 	public Flight registerFlight(Flight flight) throws DuplicateDataException {
@@ -55,7 +60,8 @@ public class FlightServiceImplements implements FlightServices {
 	@Override
 	public List<Flight> findFlightByDepartureLocation(String departureLocation) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		List<Flight> flights = flightRepository.findByDepartureAirport(departureLocation);
+		Airport airport = airportServices.findAirportByLocation(departureLocation);
+		List<Flight> flights = flightRepository.findByDepartureAirport(airport);
 		if(flights.isEmpty()) {
 			throw new NoDataFoundException("No Data Found");
 		}
@@ -65,7 +71,8 @@ public class FlightServiceImplements implements FlightServices {
 	@Override
 	public List<Flight> findFlightByArrivalLocation(String arrivalLocation) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		List<Flight> flights = flightRepository.findByArrivalAirport(arrivalLocation);
+		Airport airport = airportServices.findAirportByLocation(arrivalLocation);
+		List<Flight> flights = flightRepository.findByArrivalAirport(airport);
 		if(flights.isEmpty()) {
 			throw new NoDataFoundException("No Data Found");
 		}

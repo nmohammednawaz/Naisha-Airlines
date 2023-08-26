@@ -8,12 +8,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+
 
 @Entity
 @NoArgsConstructor
@@ -26,31 +27,31 @@ public class Admin {
 	private Integer adminId;
 	
 	
-	@NotBlank(message = "First name is required")
+	@NotNull(message = "First name is required")
     private String firstName;
     
-    @NotBlank(message = "Last name is required")
+    @NotNull(message = "Last name is required")
     private String lastName;
     
     @Pattern(regexp = "^(Male|Female|Other)$", message = "Invalid gender")
     private String gender;
     
     @Email(message = "Invalid email format")
-    @NotBlank(message = "Email is required")
+    @NotNull(message = "Email is required")
     @Column(unique = true)
     private String emailId;
     
-    @NotBlank(message = "Username is required")
+    @NotNull(message = "Username is required")
     @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters")
     @Column(unique = true)
     private String username;
     
-    @NotBlank(message = "Password is required")
+    @NotNull(message = "Password is required")
     @Size(min = 8, message = "Password must be at least 8 characters")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     
-    @NotBlank(message = "Contact number is required")
+    @NotNull(message = "Contact number is required")
     @Column(unique = true)
     private String contactNumber;
     
@@ -60,13 +61,13 @@ public class Admin {
     @NotNull(message = "isActive field must not be null")
     private boolean isActive;
 
-	public Admin(@NotBlank(message = "First name is required") String firstName,
-			@NotBlank(message = "Last name is required") String lastName,
+	public Admin(@NotNull(message = "First name is required") String firstName,
+			@NotNull(message = "Last name is required") String lastName,
 			@Pattern(regexp = "^(Male|Female|Other)$", message = "Invalid gender") String gender,
-			@Email(message = "Invalid email format") @NotBlank(message = "Email is required") String emailId,
-			@NotBlank(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
-			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
-			@NotBlank(message = "Contact number is required") String contactNumber,
+			@Email(message = "Invalid email format") @NotNull(message = "Email is required") String emailId,
+			@NotNull(message = "Username is required") @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters") String username,
+			@NotNull(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters") String password,
+			@NotNull(message = "Contact number is required") String contactNumber,
 			@NotNull(message = "isActive field must not be null") boolean isActive) {
 		super();
 		this.firstName = firstName;
