@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.util.List;
 
@@ -8,7 +8,6 @@ import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Passenger;
-import com.naishaairlines.service.PassengerServices;
 
 @Service
 public class PassengerServiceImplements implements PassengerServices {

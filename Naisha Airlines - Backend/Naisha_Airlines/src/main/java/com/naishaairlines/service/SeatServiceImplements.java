@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.util.List;
 
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Seat;
-import com.naishaairlines.service.SeatServices;
 
 @Service
 public class SeatServiceImplements implements SeatServices {

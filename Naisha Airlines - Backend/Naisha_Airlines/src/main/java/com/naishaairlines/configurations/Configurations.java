@@ -51,5 +51,4 @@ public class Configurations {
 		return http.build();
 	}
 
-
 }

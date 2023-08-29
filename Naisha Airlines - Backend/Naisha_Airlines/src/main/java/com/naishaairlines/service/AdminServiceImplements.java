@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +11,6 @@ import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Admin;
 import com.naishaairlines.repository.AdminRepository;
-import com.naishaairlines.service.AdminServices;
 
 @Service
 public class AdminServiceImplements implements AdminServices {

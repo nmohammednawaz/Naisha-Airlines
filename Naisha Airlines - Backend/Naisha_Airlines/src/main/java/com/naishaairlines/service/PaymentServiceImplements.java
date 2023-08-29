@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.util.List;
 
@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Payment;
-import com.naishaairlines.service.PaymentServices;
 
 @Service
 public class PaymentServiceImplements implements PaymentServices {
