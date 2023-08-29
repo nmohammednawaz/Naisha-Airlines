@@ -6,4 +6,6 @@ public interface SecurityDetails {
 	
 	public static final String JWT_HEADER = "Authorization";
 	
+	public static final long EXPIRATION_TIME = 3 * 60 * 60 * 1000;
+	
 }

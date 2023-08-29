@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.util.List;
 
@@ -15,7 +15,6 @@ import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Airport;
 import com.naishaairlines.models.Flight;
 import com.naishaairlines.repository.AirportRepository;
-import com.naishaairlines.service.AirportServices;
 
 @Service
 public class AirportServiceImplements implements AirportServices {

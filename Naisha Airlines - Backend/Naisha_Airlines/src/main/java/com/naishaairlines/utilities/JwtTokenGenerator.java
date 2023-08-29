@@ -14,6 +14,7 @@ import javax.crypto.SecretKey;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -27,6 +28,36 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Component
 public class JwtTokenGenerator extends OncePerRequestFilter {
+	
+//	private final SecretKey secretKey = Keys.hmacShaKeyFor(SecurityDetails.JWT_KEY.getBytes());
+//
+//    @Override
+//    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+//            throws ServletException, IOException {
+//
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        if (authentication != null) {
+//            String jwt = generateToken(authentication);
+//            response.addHeader(SecurityDetails.JWT_HEADER, "Bearer " + jwt);
+//        }
+//
+//        filterChain.doFilter(request, response);
+//    }
+//    
+//    public String generateToken(Authentication authentication) {
+//        User user = (User) authentication.getPrincipal();
+//        String authorities = getValue(user.getAuthorities());
+//
+//        return Jwts.builder()
+//        		.setIssuer("Naisha Airlines")
+//                .setSubject("JWT_TOKEN")
+//                .claim("username", user.getUsername())
+//                .claim("authorities", authorities)
+//                .setIssuedAt(new Date())
+//                .setExpiration(new Date(new Date().getTime() + SecurityDetails.EXPIRATION_TIME))
+//                .signWith(secretKey)
+//                .compact();
+//    }
 
 
 	@Override
@@ -60,7 +91,6 @@ public class JwtTokenGenerator extends OncePerRequestFilter {
 		for(GrantedAuthority autho : collection) {
 			set.add(autho.getAuthority()) ;
 		}
-		
 		return String.join(",", set) ;
 	}
 
@@ -68,8 +98,8 @@ public class JwtTokenGenerator extends OncePerRequestFilter {
 	protected boolean shouldNotFilter(HttpServletRequest request) {
 	    String servletPath = request.getServletPath();
 	    return !(
-	        servletPath.equals("/passengers/signIn") ||
-	        servletPath.equals("/admin/signIn") 
+	        servletPath.equals("/passengers/login") ||
+	        servletPath.equals("/admins/login") 
 	        
 	    );
 	}

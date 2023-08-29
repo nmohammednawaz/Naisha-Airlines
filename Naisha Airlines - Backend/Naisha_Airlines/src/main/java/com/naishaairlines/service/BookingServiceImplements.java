@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Booking;
-import com.naishaairlines.service.BookingServices;
 
 @Service
 public class BookingServiceImplements implements BookingServices {

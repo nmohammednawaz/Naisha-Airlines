@@ -1,4 +1,4 @@
-package com.naishaairlines.serviceimplements;
+package com.naishaairlines.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +33,6 @@ public class ManualUserDetailsService implements UserDetailsService {
 		else return false;
 	}
 	
-	
-	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
@@ -47,20 +45,24 @@ public class ManualUserDetailsService implements UserDetailsService {
 			List<GrantedAuthority> authorities = new ArrayList<>() ;
 			SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+admin.getRole().toUpperCase()) ;
 			authorities.add(autho) ;
+			
 			User secUser = new User(admin.getUsername(), admin.getPassword(),  authorities) ;
 			return secUser ;
+			
 		}else {
 			
 			Optional<Passenger> optionalPassenger = passengerRepository.findByUsername(username);
 				 
 				if(optionalPassenger.isEmpty()) throw new UsernameNotFoundException("User not found");
+				
 				Passenger passenger = optionalPassenger.get();
+				
 				List<GrantedAuthority> authorities = new ArrayList<>() ;
 				SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+passenger.getRole().toUpperCase()) ;
 				authorities.add(autho) ;
+				
 				User secUser = new User(passenger.getUsername(), passenger.getPassword(),  authorities) ;
 				return secUser ;
-
 				
 			}
 		}
