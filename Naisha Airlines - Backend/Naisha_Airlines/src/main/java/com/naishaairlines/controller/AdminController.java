@@ -24,9 +24,6 @@ public class AdminController {
 	@Autowired
 	private AdminServices adminServices;
 	
-//	@Autowired
-//	private AuthenticationManager authenticationManager;
-	
 	@PostMapping("/register")
 	public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin){
 		return new ResponseEntity<Admin>(adminServices.registerAdmin(admin), HttpStatus.ACCEPTED);
@@ -34,18 +31,8 @@ public class AdminController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<String> loginAdmin(Authentication authentication){
-		System.out.println(authentication.toString());
 		Admin admin = adminServices.findAdminByUsername(authentication.getName());
 		return new ResponseEntity<String>(admin.getUsername() + " Sign In SuccessFull..!", HttpStatus.OK);
 	}
-	
-//	@PostMapping("/login")
-//	public ResponseEntity<String> loginAdmin(@RequestBody LoginRequest loginRequest){
-//		Admin admin = adminServices.findAdminByUsername(loginRequest.getUsername());
-////		Authentication authentication = 
-//		return new ResponseEntity<String>(admin.getUsername() + " Sign In SuccessFull..!", HttpStatus.OK);
-//	}
-	
-	
 	
 }
