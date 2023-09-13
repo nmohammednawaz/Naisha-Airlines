@@ -25,14 +25,30 @@ public class FlightServiceImplements implements FlightServices {
 	public Flight registerFlight(Flight flight) throws DuplicateDataException {
 		
 		if(flightRepository.existsByFlightNumber(flight.getFlightNumber())) throw new DuplicateDataException("Flight Already Registered With Number " + flight.getFlightNumber());
-		
+		Airport arrivalAirport = airportServices.findAirportByLocation(flight.getArrivalAirport().getLocation());
+		Airport departureAirport = airportServices.findAirportByLocation(flight.getDepartureAirport().getLocation());
+		arrivalAirport.getArrivingFlights().add(flight);
+		departureAirport.getDepartingFlights().add(flight);
+		flight.setArrivalAirport(arrivalAirport);
+		flight.setDepartureAirport(departureAirport);
+		airportServices.updateAirport(departureAirport);
+		airportServices.updateAirport(arrivalAirport);
 		return flightRepository.save(flight);
 	}
 
 	@Override
 	public Flight upateFlight(Flight flight) throws NoDataFoundException {
 		// TODO Auto-generated method stub
+		Airport arrivalAirport = airportServices.findAirportByLocation(flight.getArrivalAirport().getLocation());
+		Airport departureAirport = airportServices.findAirportByLocation(flight.getDepartureAirport().getLocation());
+		arrivalAirport.getArrivingFlights().add(flight);
+		departureAirport.getDepartingFlights().add(flight);
+		flight.setArrivalAirport(arrivalAirport);
+		flight.setDepartureAirport(departureAirport);
+		airportServices.updateAirport(departureAirport);
+		airportServices.updateAirport(arrivalAirport);
 		return flightRepository.save(flight);
+		
 	}
 
 	@Override

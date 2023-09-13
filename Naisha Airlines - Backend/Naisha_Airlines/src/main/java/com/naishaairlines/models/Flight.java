@@ -1,6 +1,6 @@
 package com.naishaairlines.models;
 
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -43,11 +43,9 @@ public class Flight {
     @JoinColumn(name = "arrival_airport_code")
     private Airport arrivalAirport;
     
-    @FutureOrPresent(message = "Departure time must be in the future or present")
-    private LocalDateTime departureTime;
+    private LocalTime departureTime;
     
-    @Future(message = "Arrival time must be in the future")
-    private LocalDateTime arrivalTime;
+    private LocalTime arrivalTime;
     
     @Min(value = 1, message = "Total seats must be at least 1")
     private int totalSeats;
@@ -59,23 +57,26 @@ public class Flight {
     private double fare;
     
     @OneToMany(mappedBy = "flight")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private List<Seat> seats;
     
     @OneToMany(mappedBy = "flight")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private List<Booking> bookings;
     
     @NotNull(message = "isDeleted field must not be null")
     private boolean isDeleted;
     
     @AssertTrue(message = "Available seats cannot be greater than total seats")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private boolean isAvailableSeatsValid() {
         return availableSeats <= totalSeats;
     }
 
 	public Flight(@NotBlank(message = "Flight number is required") String flightNumber, Airport departureAirport,
 			Airport arrivalAirport,
-			@FutureOrPresent(message = "Departure time must be in the future or present") LocalDateTime departureTime,
-			@Future(message = "Arrival time must be in the future") LocalDateTime arrivalTime,
+			@FutureOrPresent(message = "Departure time must be in the future or present") LocalTime departureTime,
+			@Future(message = "Arrival time must be in the future") LocalTime arrivalTime,
 			@Min(value = 1, message = "Total seats must be at least 1") int totalSeats,
 			@Min(value = 0, message = "Available seats cannot be negative") int availableSeats,
 			@Positive(message = "Fare must be a positive value") double fare, List<Seat> seats, List<Booking> bookings,
@@ -93,6 +94,8 @@ public class Flight {
 		this.bookings = bookings;
 		this.isDeleted = isDeleted;
 	}
+
+	
     
  
 }
