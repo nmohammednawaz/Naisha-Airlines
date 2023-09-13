@@ -1,8 +1,5 @@
 package com.naishaairlines.utilities;
 
-
-
-
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Date;
