@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 //import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 //import org.springframework.web.bind.annotation.GetMapping;
@@ -95,8 +96,23 @@ public class AdminController {
 		return new ResponseEntity<List<Flight>>(flightServices.viewAllFlights(), HttpStatus.OK);
 	}
 	
+	@DeleteMapping("deleteFlights/{flightId}")
+	public ResponseEntity<Flight> deleteFlightById(@PathVariable Integer flightId){
+		return new ResponseEntity<Flight>(flightServices.deleteFlightById(flightId), HttpStatus.OK);
+	}
+	
 	@GetMapping("/flights/{flightId}")
 	public ResponseEntity<Flight> findFlightById(@PathVariable Integer flightId){
 		return new ResponseEntity<Flight>(flightServices.findFlightById(flightId), HttpStatus.OK);
+	}
+    
+	@GetMapping("/availableSeats/{flightId}")
+	public ResponseEntity<Integer> viewAvailableSeatsByFlightId(@PathVariable Integer flightId){
+		return new ResponseEntity<Integer>(flightServices.viewAvailableSeats(flightId), HttpStatus.OK);
+	}
+	
+	@GetMapping("/totalSeats/{flightId}")
+	public ResponseEntity<Integer> viewTotalSeatsByFlightId(@PathVariable Integer flightId){
+		return new ResponseEntity<Integer>(flightServices.viewTotalSeats(flightId), HttpStatus.OK);
 	}
 }
