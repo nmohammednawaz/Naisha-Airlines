@@ -21,9 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.naishaairlines.models.Admin;
 import com.naishaairlines.models.Airport;
 import com.naishaairlines.models.Flight;
+import com.naishaairlines.models.Passenger;
 import com.naishaairlines.service.AdminServices;
 import com.naishaairlines.service.AirportServices;
 import com.naishaairlines.service.FlightServices;
+import com.naishaairlines.service.PassengerServices;
 
 import jakarta.validation.Valid;
 
@@ -39,6 +41,9 @@ public class AdminController {
 	
 	@Autowired
 	private FlightServices flightServices;
+	
+	@Autowired
+	private PassengerServices passengerServices;
 	
 	@PostMapping("/register")
 	public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin){
@@ -115,4 +120,21 @@ public class AdminController {
 	public ResponseEntity<Integer> viewTotalSeatsByFlightId(@PathVariable Integer flightId){
 		return new ResponseEntity<Integer>(flightServices.viewTotalSeats(flightId), HttpStatus.OK);
 	}
+	
+	@GetMapping("/passengers")
+	public ResponseEntity<List<Passenger>> viewAllPassengers(){
+		return new ResponseEntity<List<Passenger>>(passengerServices.viewAllPassengers(), HttpStatus.OK);
+	}
+	
+	@GetMapping("/{passengerId}")
+	public ResponseEntity<Passenger> findPassengerById(@PathVariable Integer passengerId){
+		return new ResponseEntity<Passenger>(passengerServices.findPassengerById(passengerId), HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/passengers/{passengerId}")
+	public ResponseEntity<Passenger> deActivatePassenger(@PathVariable Integer passengerId){
+		return new ResponseEntity<Passenger>(passengerServices.deActivatePassenger(passengerId), HttpStatus.OK);
+	}
+	
+	
 }

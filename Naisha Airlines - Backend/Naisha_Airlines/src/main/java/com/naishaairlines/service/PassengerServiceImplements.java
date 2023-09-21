@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.naishaairlines.configurations.PasswordEncoderConfiguration;
 import com.naishaairlines.dto.CommonDTO;
@@ -48,10 +49,16 @@ public class PassengerServiceImplements implements PassengerServices {
 		return passengerRepository.save(passenger);
 	}
 
+	@Transactional
 	@Override
 	public Passenger deActivatePassenger(Integer passengerId) throws NoDataFoundException {
 		Passenger passenger = findPassengerById(passengerId);
-		passenger.setActive(false);
+		if(passenger.isActive()) {
+			passenger.setActive(false);
+		}else {
+			throw new NoDataFoundException("Dear Admin, Passenger is Already DeActivated");
+		}
+		passengerRepository.save(passenger);
 		return passenger;
 	}
 

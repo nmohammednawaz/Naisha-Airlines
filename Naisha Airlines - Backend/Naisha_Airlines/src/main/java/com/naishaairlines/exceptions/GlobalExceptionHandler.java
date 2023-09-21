@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.InternalAuthenticationServiceException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -39,6 +42,33 @@ public class GlobalExceptionHandler {
 		customizedErrorDetails.setDescription(wr.getDescription(false));
 		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
 		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(BadCredentialsException.class)
+	public ResponseEntity<CustomizedErrorDetails> badCredentialsException(BadCredentialsException bde, WebRequest wr){
+		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
+		customizedErrorDetails.setMessage(bde.getMessage());
+		customizedErrorDetails.setDescription(wr.getDescription(false));
+		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(UsernameNotFoundException.class)
+	public ResponseEntity<CustomizedErrorDetails> usernameNotFoundException(UsernameNotFoundException unfe, WebRequest wr){
+		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
+		customizedErrorDetails.setMessage(unfe.getMessage());
+		customizedErrorDetails.setDescription(wr.getDescription(false));
+		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(InternalAuthenticationServiceException.class)
+	public ResponseEntity<CustomizedErrorDetails> internalAuthenticationServiceException(InternalAuthenticationServiceException iase, WebRequest wr){
+		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
+		customizedErrorDetails.setMessage(iase.getMessage());
+		customizedErrorDetails.setDescription(wr.getDescription(false));
+		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.BAD_REQUEST);
 	}
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
