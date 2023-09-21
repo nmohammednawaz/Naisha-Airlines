@@ -20,29 +20,45 @@ public class PassengerServiceImplements implements PassengerServices {
 	
 	@Autowired
 	private PasswordEncoderConfiguration passwordEncoderConfiguration;
+	
+	private void checkDuplicate(String emailId, String username, String contactNumber) throws DuplicateDataException {
+		if(passengerRepository.existsByEmailId(emailId)) {
+			throw new DuplicateDataException("Dear User, Email Id Already Registered");
+		}
+		if(passengerRepository.existsByUsername(username)) {
+			throw new DuplicateDataException("Dear User, Username Already Registered");
+		}
+		if(passengerRepository.existsByContactNumber(contactNumber)) {
+			throw new DuplicateDataException("Dear User, Contact Number Already Registered");
+		}
+	}
 
 	@Override
 	public Passenger registerPassenger(Passenger passenger) throws DuplicateDataException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		checkDuplicate(passenger.getEmailId(), passenger.getUsername(), passenger.getContactNumber());
+		
+		passenger.setPassword(passwordEncoderConfiguration.passwordEncoder().encode(passenger.getPassword()));
+		return passengerRepository.save(passenger);
 	}
 
 	@Override
 	public Passenger updatePassenger(Passenger passenger) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return passengerRepository.save(passenger);
 	}
 
 	@Override
 	public Passenger deActivatePassenger(Integer passengerId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		return null;
+		Passenger passenger = findPassengerById(passengerId);
+		passenger.setActive(false);
+		return passenger;
 	}
 
 	@Override
 	public Passenger findPassengerById(Integer passengerId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return passengerRepository.findById(passengerId).orElseThrow(() -> new NoDataFoundException("Dear User, No Passenger Found With Id: " + passengerId));
 	}
 
 	@Override
