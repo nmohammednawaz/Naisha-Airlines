@@ -56,3 +56,9 @@
 2023-09-20T20:11:02.948+05:30 DEBUG 20144 --- [http-nio-8088-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
 2023-09-20T20:11:02.951+05:30 DEBUG 20144 --- [http-nio-8088-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
 2023-09-20T20:11:04.575+05:30  INFO 20144 --- [http-nio-8088-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1597 ms
+2023-09-20T20:28:15.089+05:30  INFO 20144 --- [RMI TCP Connection(28)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-09-20T20:28:15.122+05:30  INFO 20144 --- [RMI TCP Connection(28)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-20T20:28:15.126+05:30  INFO 20144 --- [RMI TCP Connection(28)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-20T20:28:15.148+05:30  INFO 20144 --- [RMI TCP Connection(28)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20T20:28:15.157+05:30  INFO 20144 --- [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-20T20:28:15.180+05:30  INFO 20144 --- [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

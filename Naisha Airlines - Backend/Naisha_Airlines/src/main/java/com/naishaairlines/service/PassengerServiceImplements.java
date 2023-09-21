@@ -2,15 +2,24 @@ package com.naishaairlines.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.naishaairlines.configurations.PasswordEncoderConfiguration;
 import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Passenger;
+import com.naishaairlines.repository.PassengerRepository;
 
 @Service
 public class PassengerServiceImplements implements PassengerServices {
+	
+	@Autowired
+	private PassengerRepository passengerRepository;
+	
+	@Autowired
+	private PasswordEncoderConfiguration passwordEncoderConfiguration;
 
 	@Override
 	public Passenger registerPassenger(Passenger passenger) throws DuplicateDataException {
