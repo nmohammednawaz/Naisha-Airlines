@@ -16,13 +16,15 @@ import org.springframework.stereotype.Service;
 import com.naishaairlines.models.Admin;
 import com.naishaairlines.models.Passenger;
 import com.naishaairlines.repository.AdminRepository;
-import com.naishaairlines.repository.PassengerRepository;
 
 @Service
 public class ManualUserDetailsService implements UserDetailsService {
     
 	@Autowired
-	 private PassengerRepository passengerRepository;
+	 private PassengerServices passengerServices;
+	
+	@Autowired
+	private AdminServices admServices;
 	
 	@Autowired
 	private AdminRepository adminRepository;
@@ -37,10 +39,8 @@ public class ManualUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
 		if(isAdmin(username)) {
-			Optional<Admin> optionalAdmin = adminRepository.findByUsername(username);
+			Admin admin = admServices.findAdminByUsername(username);
 			 
-			if(optionalAdmin.isEmpty()) throw new UsernameNotFoundException("Admin not found");
-			Admin admin = optionalAdmin.get();
 			 
 			List<GrantedAuthority> authorities = new ArrayList<>() ;
 			SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+admin.getRole().toUpperCase()) ;
@@ -51,18 +51,14 @@ public class ManualUserDetailsService implements UserDetailsService {
 			
 		}else {
 			
-			Optional<Passenger> optionalPassenger = passengerRepository.findByUsername(username);
+			Passenger passenger = passengerServices.findPassengerByUsername(username);
 				 
-				if(optionalPassenger.isEmpty()) throw new UsernameNotFoundException("User not found");
-				
-				Passenger passenger = optionalPassenger.get();
-				
-				List<GrantedAuthority> authorities = new ArrayList<>() ;
-				SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+passenger.getRole().toUpperCase()) ;
-				authorities.add(autho) ;
-				
-				User secUser = new User(passenger.getUsername(), passenger.getPassword(),  authorities) ;
-				return secUser ;
+			List<GrantedAuthority> authorities = new ArrayList<>() ;
+			SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+passenger.getRole().toUpperCase()) ;
+			authorities.add(autho) ;
+			
+			User secUser = new User(passenger.getUsername(), passenger.getPassword(),  authorities) ;
+			return secUser ;
 				
 			}
 		}
