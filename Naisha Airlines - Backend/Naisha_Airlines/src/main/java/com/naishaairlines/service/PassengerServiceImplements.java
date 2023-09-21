@@ -64,19 +64,25 @@ public class PassengerServiceImplements implements PassengerServices {
 	@Override
 	public Passenger findPassengerByEmail(String emailId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return passengerRepository.findByEmailId(emailId).orElseThrow(() -> new NoDataFoundException("Dear User, No Passenger Found With Email Id: " + emailId));
 	}
 
 	@Override
 	public Passenger findPassengerByUsername(String username) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return passengerRepository.findByUsername(username).orElseThrow(() -> new NoDataFoundException("Dear User, No Passenger Found With Username: " + username));
 	}
 
 	@Override
 	public List<Passenger> viewAllPassengers() throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		List<Passenger> passengersList = passengerRepository.findAll();
+		
+		if(passengersList.isEmpty()) {
+			throw new NoDataFoundException("No Passengers Found");
+		}
+		
+		return passengersList;
 	}
 
 	@Override
