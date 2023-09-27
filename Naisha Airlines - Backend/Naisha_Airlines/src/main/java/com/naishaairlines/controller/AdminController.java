@@ -51,9 +51,8 @@ public class AdminController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<String> loginAdmin(Authentication authentication){
-		Admin admin = adminServices.findAdminByUsername(authentication.getName());
-		return new ResponseEntity<String>(admin.getUsername() + " Sign In SuccessFull..!", HttpStatus.OK);
+	public ResponseEntity<Admin> loginAdmin(Authentication authentication){
+		return new ResponseEntity<Admin>(adminServices.loginAdmin(authentication), HttpStatus.OK);
 	}
 	
 	@PostMapping("/addAirports")
@@ -71,17 +70,27 @@ public class AdminController {
 		return new ResponseEntity<List<Airport>>(airportServices.viewAllAirports(), HttpStatus.OK);
 	}
 	
-	@GetMapping("/airports/{airportId}")
+	@GetMapping("arrivingFlights/{airportId}")
+	public ResponseEntity<List<Flight>> viewAllArrivingFlights(@PathVariable Integer airportId){
+		return new ResponseEntity<List<Flight>>(flightServices.findAllArrivingFlightsByAirportId(airportId), HttpStatus.OK);
+	}
+	
+	@GetMapping("departingFlights/{airportId}")
+	public ResponseEntity<List<Flight>> viewAllDepartingFlights(@PathVariable Integer airportId){
+		return new ResponseEntity<List<Flight>>(flightServices.findAllDepartingFlightsByAirportId(airportId), HttpStatus.OK);
+	}
+	
+	@GetMapping("/airportByIds/{airportId}")
 	public ResponseEntity<Airport> findAirportById(@PathVariable Integer airportId){
 		return new ResponseEntity<Airport>(airportServices.findAirportById(airportId), HttpStatus.OK);
 	}
 	
-	@GetMapping("/airports/{airportName}")
+	@GetMapping("/airportByNames/{airportName}")
 	public ResponseEntity<Airport> findAirportByName(@PathVariable String airportName){
 		return new ResponseEntity<Airport>(airportServices.findAirportByName(airportName), HttpStatus.OK);
 	}
 	
-	@GetMapping("/airports/{airportLocation}")
+	@GetMapping("/airportByLocations/{airportLocation}")
 	public ResponseEntity<Airport> findAirportByLocation(@PathVariable String airportLocation){
 		return new ResponseEntity<Airport>(airportServices.findAirportByLocation(airportLocation), HttpStatus.OK);
 	}
@@ -106,7 +115,7 @@ public class AdminController {
 		return new ResponseEntity<Flight>(flightServices.deleteFlightById(flightId), HttpStatus.OK);
 	}
 	
-	@GetMapping("/flights/{flightId}")
+	@GetMapping("/flightByIds/{flightId}")
 	public ResponseEntity<Flight> findFlightById(@PathVariable Integer flightId){
 		return new ResponseEntity<Flight>(flightServices.findFlightById(flightId), HttpStatus.OK);
 	}

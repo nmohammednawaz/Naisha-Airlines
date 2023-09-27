@@ -1,6 +1,7 @@
 package com.naishaairlines.models;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -40,12 +41,13 @@ public class Booking {
     
     @ManyToOne
     @JoinColumn(name = "passenger_id")
-    @NotNull(message = "Passenger is required")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @JsonIgnore
     private Passenger passenger;
     
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<AdditionalPassenger> additionalPassengers;
+    private List<AdditionalPassenger> additionalPassengers = new ArrayList<>();
     
     @OneToOne
     @JoinColumn(name = "passenger_seat_number")
@@ -73,26 +75,6 @@ public class Booking {
     @JsonIgnore
     private Feedback feedback;
 
-	public Booking(@NotNull(message = "Flight is required") Flight flight,
-			@NotNull(message = "PNR is required") String pnrNumber,
-			@NotNull(message = "Passenger is required") Passenger passenger,
-			List<AdditionalPassenger> additionalPassengers, Seat seat,
-			@NotNull(message = "Booked on date is required") LocalDate bookedOn,
-			@NotNull(message = "Booking date is required") LocalDate bookingDate,
-			@NotBlank(message = "Booking status is required") String bookingStatus, Ticket ticket, Payment payment,
-			Feedback feedback) {
-		super();
-		this.flight = flight;
-		this.pnrNumber = pnrNumber;
-		this.passenger = passenger;
-		this.additionalPassengers = additionalPassengers;
-		this.seat = seat;
-		this.bookedOn = bookedOn;
-		this.bookingDate = bookingDate;
-		this.bookingStatus = bookingStatus;
-		this.ticket = ticket;
-		this.payment = payment;
-		this.feedback = feedback;
-	}
+	
  
 }

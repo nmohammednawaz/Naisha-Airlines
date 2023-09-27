@@ -38,7 +38,8 @@ public class Configurations {
 					return configuration;
 				}
 			});
-		}).authorizeHttpRequests(auth -> auth
+		})
+		.authorizeHttpRequests(auth -> auth
 				.requestMatchers(HttpMethod.POST, "/passengers/register", "/admins/register").permitAll()
 				.requestMatchers("/swagger-ui*/**", "/v3/api-docs/**").permitAll()
 				.requestMatchers("/passengers/**").hasRole("PASSENGER")

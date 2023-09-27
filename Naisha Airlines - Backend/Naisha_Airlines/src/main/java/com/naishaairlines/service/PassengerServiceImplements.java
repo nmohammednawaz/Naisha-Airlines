@@ -3,6 +3,7 @@ package com.naishaairlines.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -41,6 +42,16 @@ public class PassengerServiceImplements implements PassengerServices {
 		
 		passenger.setPassword(passwordEncoderConfiguration.passwordEncoder().encode(passenger.getPassword()));
 		return passengerRepository.save(passenger);
+	}
+	
+	@Override
+	public Passenger loginPassenger(Authentication authentication) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		Passenger passenger = findPassengerByUsername(authentication.getName());
+		if(!passenger.isActive()) {
+			throw new NoDataFoundException("Dear User, Your Account is Inactive, Please Contact To Customer Care");
+		}
+		return passenger;
 	}
 
 	@Override

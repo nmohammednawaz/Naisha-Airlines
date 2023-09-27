@@ -17,6 +17,8 @@ public interface FlightServices {
 	List<Flight> findFlightByDepartureLocation(String departureLocation) throws NoDataFoundException;
 	List<Flight> findFlightByArrivalLocation(String arrivalLocation) throws NoDataFoundException;
 	List<Flight> viewAllFlights() throws NoDataFoundException;
+	List<Flight> findAllDepartingFlightsByAirportId(Integer airportId) throws NoDataFoundException;
+	List<Flight> findAllArrivingFlightsByAirportId(Integer airportId) throws NoDataFoundException;
 	CommonDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection) throws NoDataFoundException;
 	Integer viewAvailableSeats(Integer flightId) throws NoDataFoundException;
 	Integer viewTotalSeats(Integer flightId) throws NoDataFoundException;

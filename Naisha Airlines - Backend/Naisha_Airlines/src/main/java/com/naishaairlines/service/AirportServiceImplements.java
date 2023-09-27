@@ -13,7 +13,6 @@ import com.naishaairlines.dto.CommonDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Airport;
-import com.naishaairlines.models.Flight;
 import com.naishaairlines.repository.AirportRepository;
 
 @Service
@@ -91,22 +90,6 @@ public class AirportServiceImplements implements AirportServices {
 	public Airport findAirportByLocation(String location) throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return airportRepository.findByLocation(location).orElseThrow(() -> new NoDataFoundException("No Airport Found With Location: " + location));
-	}
-
-	@Override
-	public List<Flight> viewAllDepartingFlights(Integer airportId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		List<Flight> flightList = airportRepository.findAllDepartingFlightsByAirportId(airportId);
-		if(flightList.isEmpty()) throw new NoDataFoundException("No Data Found");
-		return flightList;
-	}
-
-	@Override
-	public List<Flight> viewAllArrivingFlights(Integer airportId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		List<Flight> flightList = airportRepository.findAllArrivingFlightsByAirportId(airportId);
-		if(flightList.isEmpty()) throw new NoDataFoundException("No Data Found");
-		return flightList;
 	}
 
 	

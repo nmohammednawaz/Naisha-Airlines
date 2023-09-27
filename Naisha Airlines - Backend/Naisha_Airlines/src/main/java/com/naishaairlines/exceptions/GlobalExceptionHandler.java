@@ -1,5 +1,6 @@
 package com.naishaairlines.exceptions;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,6 +14,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
+
+import jakarta.servlet.ServletException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -44,13 +47,31 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
 	}
 	
+	@ExceptionHandler(IOException.class)
+	public ResponseEntity<CustomizedErrorDetails> ioException(IOException ex, WebRequest wr){
+		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
+		customizedErrorDetails.setMessage(ex.getMessage());
+		customizedErrorDetails.setDescription(wr.getDescription(false));
+		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(ServletException.class)
+	public ResponseEntity<CustomizedErrorDetails> servletException(ServletException se, WebRequest wr){
+		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
+		customizedErrorDetails.setMessage(se.getMessage());
+		customizedErrorDetails.setDescription(wr.getDescription(false));
+		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.NOT_FOUND);
+	}
+	
 	@ExceptionHandler(BadCredentialsException.class)
 	public ResponseEntity<CustomizedErrorDetails> badCredentialsException(BadCredentialsException bde, WebRequest wr){
 		CustomizedErrorDetails customizedErrorDetails = new CustomizedErrorDetails();
 		customizedErrorDetails.setMessage(bde.getMessage());
 		customizedErrorDetails.setDescription(wr.getDescription(false));
 		customizedErrorDetails.setTimeStamp(LocalDateTime.now());
-		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<CustomizedErrorDetails>(customizedErrorDetails, HttpStatus.UNAUTHORIZED);
 	}
 	
 	@ExceptionHandler(UsernameNotFoundException.class)
