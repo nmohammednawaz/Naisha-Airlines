@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Booking;
 import com.naishaairlines.models.Flight;
@@ -35,11 +35,11 @@ public class BookingServiceImplements implements BookingServices {
 		booking.setPassenger(passenger);
 		booking.setFlight(flight);
 		
-//		passenger.getBookings().add(booking);
-//		flight.getBookings().add(booking);
+		passenger.getBookings().add(booking);
+		flight.getBookings().add(booking);
 		
-//		flightServices.upateFlight(flight);
-//		passengerServices.updatePassenger(passenger);
+		flightServices.upateFlight(flight);
+		passengerServices.updatePassenger(passenger);
 		
 		return bookingRepository.save(booking);
 	}
@@ -81,7 +81,7 @@ public class BookingServiceImplements implements BookingServices {
 	}
 
 	@Override
-	public CommonDTO<Booking> viewAllBookingsOfFlight(int pageNumber, int pageSize, String sortByColumn,
+	public CommonPaginationDTO<Booking> viewAllBookingsOfFlight(int pageNumber, int pageSize, String sortByColumn,
 			String sortDirection, Integer flightId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;
@@ -94,7 +94,7 @@ public class BookingServiceImplements implements BookingServices {
 	}
 
 	@Override
-	public CommonDTO<Booking> viewAllBookingsOfPassenger(int pageNumber, int pageSize, String sortByColumn,
+	public CommonPaginationDTO<Booking> viewAllBookingsOfPassenger(int pageNumber, int pageSize, String sortByColumn,
 			String sortDirection, Integer passengerId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;
@@ -107,7 +107,7 @@ public class BookingServiceImplements implements BookingServices {
 	}
 
 	@Override
-	public CommonDTO<Booking> viewAllBookings(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
+	public CommonPaginationDTO<Booking> viewAllBookings(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
 			throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;

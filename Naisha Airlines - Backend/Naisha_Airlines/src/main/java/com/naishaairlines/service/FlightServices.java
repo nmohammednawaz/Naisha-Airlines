@@ -2,7 +2,7 @@ package com.naishaairlines.service;
 
 import java.util.List;
 
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Flight;
@@ -17,9 +17,7 @@ public interface FlightServices {
 	List<Flight> findFlightByDepartureLocation(String departureLocation) throws NoDataFoundException;
 	List<Flight> findFlightByArrivalLocation(String arrivalLocation) throws NoDataFoundException;
 	List<Flight> viewAllFlights() throws NoDataFoundException;
-	List<Flight> findAllDepartingFlightsByAirportId(Integer airportId) throws NoDataFoundException;
-	List<Flight> findAllArrivingFlightsByAirportId(Integer airportId) throws NoDataFoundException;
-	CommonDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection) throws NoDataFoundException;
+	CommonPaginationDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection) throws NoDataFoundException;
 	Integer viewAvailableSeats(Integer flightId) throws NoDataFoundException;
 	Integer viewTotalSeats(Integer flightId) throws NoDataFoundException;
 }

@@ -46,7 +46,7 @@ public class Booking {
     private Passenger passenger;
     
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
-    @JsonIgnore
+//    @JsonIgnore
     private List<AdditionalPassenger> additionalPassengers = new ArrayList<>();
     
     @OneToOne

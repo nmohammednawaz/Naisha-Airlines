@@ -72,12 +72,12 @@ public class AdminController {
 	
 	@GetMapping("arrivingFlights/{airportId}")
 	public ResponseEntity<List<Flight>> viewAllArrivingFlights(@PathVariable Integer airportId){
-		return new ResponseEntity<List<Flight>>(flightServices.findAllArrivingFlightsByAirportId(airportId), HttpStatus.OK);
+		return new ResponseEntity<List<Flight>>(airportServices.findAllArrivingFlightsByAirportId(airportId), HttpStatus.OK);
 	}
 	
 	@GetMapping("departingFlights/{airportId}")
 	public ResponseEntity<List<Flight>> viewAllDepartingFlights(@PathVariable Integer airportId){
-		return new ResponseEntity<List<Flight>>(flightServices.findAllDepartingFlightsByAirportId(airportId), HttpStatus.OK);
+		return new ResponseEntity<List<Flight>>(airportServices.findAllDepartingFlightsByAirportId(airportId), HttpStatus.OK);
 	}
 	
 	@GetMapping("/airportByIds/{airportId}")

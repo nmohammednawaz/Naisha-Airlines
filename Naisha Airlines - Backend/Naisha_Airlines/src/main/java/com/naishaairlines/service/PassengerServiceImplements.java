@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.naishaairlines.configurations.PasswordEncoderConfiguration;
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Passenger;
@@ -104,7 +104,7 @@ public class PassengerServiceImplements implements PassengerServices {
 	}
 
 	@Override
-	public CommonDTO<Passenger> viewAllPassengers(int pageNumber, int pageSize, String sortByColumn,
+	public CommonPaginationDTO<Passenger> viewAllPassengers(int pageNumber, int pageSize, String sortByColumn,
 			String sortDirection) throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;

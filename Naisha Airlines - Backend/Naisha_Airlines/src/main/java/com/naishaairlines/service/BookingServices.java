@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.security.core.Authentication;
 
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Booking;
 
@@ -18,10 +18,10 @@ public interface BookingServices {
 	Booking viewBookingByPnr(String pnrNumber) throws NoDataFoundException;
 	List<Booking> viewBookingsByDate(LocalDate bookinDate) throws NoDataFoundException;
 	List<Booking> viewAllBookingsOfFlight(Integer flightId) throws NoDataFoundException;
-	CommonDTO<Booking> viewAllBookingsOfFlight(int pageNumber, int pageSize, String sortByColumn, String sortDirection, Integer flightId) throws NoDataFoundException;
+	CommonPaginationDTO<Booking> viewAllBookingsOfFlight(int pageNumber, int pageSize, String sortByColumn, String sortDirection, Integer flightId) throws NoDataFoundException;
 	List<Booking> viewAllBookingsOfPassenger(Integer passengerId) throws NoDataFoundException;
-	CommonDTO<Booking> viewAllBookingsOfPassenger(int pageNumber, int pageSize, String sortByColumn, String sortDirection, Integer passengerId) throws NoDataFoundException;
+	CommonPaginationDTO<Booking> viewAllBookingsOfPassenger(int pageNumber, int pageSize, String sortByColumn, String sortDirection, Integer passengerId) throws NoDataFoundException;
 	List<Booking> viewAllBookings() throws NoDataFoundException;
-	CommonDTO<Booking> viewAllBookings(int pageNumber, int pageSize, String sortByColumn, String sortDirection) throws NoDataFoundException;
+	CommonPaginationDTO<Booking> viewAllBookings(int pageNumber, int pageSize, String sortByColumn, String sortDirection) throws NoDataFoundException;
 	
 }

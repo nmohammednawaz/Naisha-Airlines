@@ -1,13 +1,11 @@
 package com.naishaairlines.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.naishaairlines.dto.CommonDTO;
-import com.naishaairlines.dto.FlightInfo;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Airport;
@@ -107,7 +105,7 @@ public class FlightServiceImplements implements FlightServices {
 	}
 
 	@Override
-	public CommonDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
+	public CommonPaginationDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
 			throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;
@@ -126,40 +124,5 @@ public class FlightServiceImplements implements FlightServices {
 		Flight flight = findFlightById(flightId);
         return flight.getTotalSeats();
 	}
-
-	@Override
-	public List<Flight> findAllDepartingFlightsByAirportId(Integer airportId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		List<FlightInfo> flightInfoList = flightRepository.findAllDepartingFlightsByAirportId(airportId);
-		
-		if(flightInfoList.isEmpty()) throw new NoDataFoundException("No Data Found 1");
-		
-		List<Flight> flightList = new ArrayList<>();
-		
-		for(FlightInfo flightInfo : flightInfoList) {
-			flightList.add(flightInfo.getFlight());
-		}
-		
-		if(flightList.isEmpty()) throw new NoDataFoundException("No Data Found");
-		return flightList;
-	}
-
-	@Override
-	public List<Flight> findAllArrivingFlightsByAirportId(Integer airportId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		List<FlightInfo> flightInfoList = flightRepository.findAllArrivingFlightsByAirportId(airportId);
-		
-		if(flightInfoList.isEmpty()) throw new NoDataFoundException("No Data Found 1");
-		
-		List<Flight> flightList = new ArrayList<>();
-		
-		for(FlightInfo flightInfo : flightInfoList) {
-			flightList.add(flightInfo.getFlight());
-		}
-		
-		if(flightList.isEmpty()) throw new NoDataFoundException("No Data Found");
-		return flightList;
-	}
-
 	
 }
