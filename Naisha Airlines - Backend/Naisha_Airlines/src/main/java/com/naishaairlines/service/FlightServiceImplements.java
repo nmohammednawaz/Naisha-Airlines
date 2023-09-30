@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Airport;
@@ -25,6 +25,7 @@ public class FlightServiceImplements implements FlightServices {
 	public Flight registerFlight(Flight flight) throws DuplicateDataException {
 		
 		if(flightRepository.existsByFlightNumber(flight.getFlightNumber())) throw new DuplicateDataException("Flight Already Registered With Number " + flight.getFlightNumber());
+		
 		Airport arrivalAirport = airportServices.findAirportByLocation(flight.getArrivalAirport().getLocation());
 		Airport departureAirport = airportServices.findAirportByLocation(flight.getDepartureAirport().getLocation());
 		arrivalAirport.getArrivingFlights().add(flight);
@@ -104,7 +105,7 @@ public class FlightServiceImplements implements FlightServices {
 	}
 
 	@Override
-	public CommonDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
+	public CommonPaginationDTO<Flight> viewAllFlights(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
 			throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;
@@ -123,6 +124,5 @@ public class FlightServiceImplements implements FlightServices {
 		Flight flight = findFlightById(flightId);
         return flight.getTotalSeats();
 	}
-
 	
 }

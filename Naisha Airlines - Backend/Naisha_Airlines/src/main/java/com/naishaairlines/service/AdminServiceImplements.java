@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import com.naishaairlines.configurations.PasswordEncoderConfiguration;
@@ -40,6 +41,16 @@ public class AdminServiceImplements implements AdminServices {
 		
 		admin.setPassword(passwordEncoderConfiguration.passwordEncoder().encode(admin.getPassword()));
 		return adminRepository.save(admin);
+	}
+	
+	@Override
+	public Admin loginAdmin(Authentication authentication) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		Admin admin = findAdminByUsername(authentication.getName());
+		if(!admin.isActive()) {
+			throw new NoDataFoundException("Dear Admin, Your Account is Inactive");
+		}
+		return admin;
 	}
 
 	@Override

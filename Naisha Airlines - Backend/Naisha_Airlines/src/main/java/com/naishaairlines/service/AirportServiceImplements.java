@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Airport;
@@ -61,7 +61,7 @@ public class AirportServiceImplements implements AirportServices {
 	}
 
 	@Override
-	public CommonDTO<Airport> viewAllAirports(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
+	public CommonPaginationDTO<Airport> viewAllAirports(int pageNumber, int pageSize, String sortByColumn, String sortDirection)
 			throws NoDataFoundException {
 		
 		Sort sort = sortDirection.equalsIgnoreCase("ASC") ? sort = Sort.by(sortByColumn).ascending() : Sort.by(sortByColumn).descending();
@@ -76,7 +76,7 @@ public class AirportServiceImplements implements AirportServices {
 			throw new NoDataFoundException("No Data Found");
 		}
 		
-		CommonDTO<Airport> airportPages = new CommonDTO<>();
+		CommonPaginationDTO<Airport> airportPages = new CommonPaginationDTO<>();
 		airportPages.setList(airports);
 		airportPages.setPageNumber(airportPage.getNumber());
 		airportPages.setPageSize(airportPage.getSize());
@@ -94,19 +94,18 @@ public class AirportServiceImplements implements AirportServices {
 	}
 
 	@Override
-	public List<Flight> viewAllDepartingFlights(Integer airportId) throws NoDataFoundException {
+	public List<Flight> findAllArrivingFlightsByAirportId(Integer airportId) throws NoDataFoundException {
 		// TODO Auto-generated method stub
-		List<Flight> flightList = airportRepository.findAllDepartingFlightsByAirportId(airportId);
-		if(flightList.isEmpty()) throw new NoDataFoundException("No Data Found");
-		return flightList;
+		Airport airport = findAirportById(airportId);
+		if(airport.getArrivingFlights().isEmpty()) throw new NoDataFoundException("No flights Found");
+		return airport.getArrivingFlights();
 	}
 
 	@Override
-	public List<Flight> viewAllArrivingFlights(Integer airportId) throws NoDataFoundException {
-		// TODO Auto-generated method stub
-		List<Flight> flightList = airportRepository.findAllArrivingFlightsByAirportId(airportId);
-		if(flightList.isEmpty()) throw new NoDataFoundException("No Data Found");
-		return flightList;
+	public List<Flight> findAllDepartingFlightsByAirportId(Integer airportId) throws NoDataFoundException {
+		Airport airport = findAirportById(airportId);
+		if(airport.getDepartingFlights().isEmpty()) throw new NoDataFoundException("No flights Found");
+		return airport.getDepartingFlights();
 	}
 
 	

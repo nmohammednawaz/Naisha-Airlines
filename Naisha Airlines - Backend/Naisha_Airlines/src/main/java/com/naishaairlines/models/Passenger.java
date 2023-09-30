@@ -1,9 +1,8 @@
 package com.naishaairlines.models;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
@@ -68,13 +67,13 @@ public class Passenger {
     @NotNull(message = "isActive field must not be null")
     private boolean isActive;
     
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @OneToMany(mappedBy = "passenger")
-    private List<Booking> bookings;
+    private List<Booking> bookings = new ArrayList<>();
     
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @OneToMany(mappedBy = "passenger")
-    private List<Payment> payments;
+    private List<Payment> payments = new ArrayList<>();
     
     
 

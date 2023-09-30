@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class CommonDTO<T> {
+public class CommonPaginationDTO<T> {
 	private List<T> list;
 	private int pageSize;
 	private int pageNumber;

@@ -1,5 +1,6 @@
 package com.naishaairlines.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -40,11 +41,11 @@ public class Airport {
     
     @JsonIgnore
     @OneToMany(mappedBy = "departureAirport")
-    private List<Flight> departingFlights;
+    private List<Flight> departingFlights = new ArrayList<>();
     
     @JsonIgnore
     @OneToMany(mappedBy = "arrivalAirport")
-    private List<Flight> arrivingFlights;
+    private List<Flight> arrivingFlights = new ArrayList<>();
 
 	public Airport(
 			@NotBlank(message = "Airport code is required") @Size(max = 3, message = "Airport code cannot exceed 3 characters") String airportCode,

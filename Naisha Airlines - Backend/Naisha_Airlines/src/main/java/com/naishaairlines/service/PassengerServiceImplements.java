@@ -3,11 +3,12 @@ package com.naishaairlines.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.naishaairlines.configurations.PasswordEncoderConfiguration;
-import com.naishaairlines.dto.CommonDTO;
+import com.naishaairlines.dto.CommonPaginationDTO;
 import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Passenger;
@@ -41,6 +42,16 @@ public class PassengerServiceImplements implements PassengerServices {
 		
 		passenger.setPassword(passwordEncoderConfiguration.passwordEncoder().encode(passenger.getPassword()));
 		return passengerRepository.save(passenger);
+	}
+	
+	@Override
+	public Passenger loginPassenger(Authentication authentication) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		Passenger passenger = findPassengerByUsername(authentication.getName());
+		if(!passenger.isActive()) {
+			throw new NoDataFoundException("Dear User, Your Account is Inactive, Please Contact To Customer Care");
+		}
+		return passenger;
 	}
 
 	@Override
@@ -93,7 +104,7 @@ public class PassengerServiceImplements implements PassengerServices {
 	}
 
 	@Override
-	public CommonDTO<Passenger> viewAllPassengers(int pageNumber, int pageSize, String sortByColumn,
+	public CommonPaginationDTO<Passenger> viewAllPassengers(int pageNumber, int pageSize, String sortByColumn,
 			String sortDirection) throws NoDataFoundException {
 		// TODO Auto-generated method stub
 		return null;

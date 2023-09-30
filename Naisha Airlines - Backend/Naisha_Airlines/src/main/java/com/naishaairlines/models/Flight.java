@@ -1,8 +1,10 @@
 package com.naishaairlines.models;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
@@ -13,8 +15,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.AssertTrue;
-import jakarta.validation.constraints.Future;
-import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -57,12 +57,12 @@ public class Flight {
     private double fare;
     
     @OneToMany(mappedBy = "flight")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private List<Seat> seats;
+    @JsonIgnore
+    private List<Seat> seats = new ArrayList<>();
     
     @OneToMany(mappedBy = "flight")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private List<Booking> bookings;
+    @JsonIgnore
+    private List<Booking> bookings = new ArrayList<>();
     
     @NotNull(message = "isDeleted field must not be null")
     private boolean isDeleted;
@@ -72,30 +72,5 @@ public class Flight {
     private boolean isAvailableSeatsValid() {
         return availableSeats <= totalSeats;
     }
-
-	public Flight(@NotBlank(message = "Flight number is required") String flightNumber, Airport departureAirport,
-			Airport arrivalAirport,
-			@FutureOrPresent(message = "Departure time must be in the future or present") LocalTime departureTime,
-			@Future(message = "Arrival time must be in the future") LocalTime arrivalTime,
-			@Min(value = 1, message = "Total seats must be at least 1") int totalSeats,
-			@Min(value = 0, message = "Available seats cannot be negative") int availableSeats,
-			@Positive(message = "Fare must be a positive value") double fare, List<Seat> seats, List<Booking> bookings,
-			@NotNull(message = "isDeleted field must not be null") boolean isDeleted) {
-		super();
-		this.flightNumber = flightNumber;
-		this.departureAirport = departureAirport;
-		this.arrivalAirport = arrivalAirport;
-		this.departureTime = departureTime;
-		this.arrivalTime = arrivalTime;
-		this.totalSeats = totalSeats;
-		this.availableSeats = availableSeats;
-		this.fare = fare;
-		this.seats = seats;
-		this.bookings = bookings;
-		this.isDeleted = isDeleted;
-	}
-
-	
-    
  
 }
