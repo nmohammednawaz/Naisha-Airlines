@@ -28,13 +28,14 @@ public class FlightServiceImplements implements FlightServices {
 		
 		Airport arrivalAirport = airportServices.findAirportByLocation(flight.getArrivalAirport().getLocation());
 		Airport departureAirport = airportServices.findAirportByLocation(flight.getDepartureAirport().getLocation());
-		arrivalAirport.getArrivingFlights().add(flight);
-		departureAirport.getDepartingFlights().add(flight);
 		flight.setArrivalAirport(arrivalAirport);
 		flight.setDepartureAirport(departureAirport);
+		Flight registeredFlight = flightRepository.save(flight);
+		arrivalAirport.getArrivingFlights().add(registeredFlight);
+		departureAirport.getDepartingFlights().add(registeredFlight);
 		airportServices.updateAirport(departureAirport);
-		airportServices.updateAirport(arrivalAirport);
-		return flightRepository.save(flight);
+		airportServices.updateAirport(arrivalAirport);	
+		return registeredFlight;
 	}
 
 	@Override

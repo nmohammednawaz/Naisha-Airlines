@@ -13,6 +13,7 @@ public interface BookingServices {
 	
 	Booking registerBooking(Booking booking, Authentication authentication) throws NoDataFoundException;
 	Booking updateBooking(Booking booking) throws NoDataFoundException;
+	Booking confirmBookingStatus(Integer bookingId) throws NoDataFoundException;
 	Booking cancelBooking(Integer BookingId) throws NoDataFoundException;
 	Booking viewBookingById(Integer bookingId) throws NoDataFoundException;
 	Booking viewBookingByPnr(String pnrNumber) throws NoDataFoundException;

@@ -1,5 +1,6 @@
 package com.naishaairlines.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 //import com.naishaairlines.dto.LoginRequest;
 import com.naishaairlines.models.Admin;
 import com.naishaairlines.models.Airport;
+import com.naishaairlines.models.Booking;
 import com.naishaairlines.models.Flight;
 import com.naishaairlines.models.Passenger;
 import com.naishaairlines.service.AdminServices;
 import com.naishaairlines.service.AirportServices;
+import com.naishaairlines.service.BookingServices;
 import com.naishaairlines.service.FlightServices;
 import com.naishaairlines.service.PassengerServices;
 
@@ -44,6 +47,9 @@ public class AdminController {
 	
 	@Autowired
 	private PassengerServices passengerServices;
+	
+	@Autowired
+	private BookingServices bookingServices;
 	
 	@PostMapping("/register")
 	public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin){
@@ -140,10 +146,39 @@ public class AdminController {
 		return new ResponseEntity<Passenger>(passengerServices.findPassengerById(passengerId), HttpStatus.OK);
 	}
 	
-	@DeleteMapping("/passengers/{passengerId}")
+	@DeleteMapping("/passengersById/{passengerId}")
 	public ResponseEntity<Passenger> deActivatePassenger(@PathVariable Integer passengerId){
 		return new ResponseEntity<Passenger>(passengerServices.deActivatePassenger(passengerId), HttpStatus.OK);
 	}
 	
+	@GetMapping("/bookings")
+	public ResponseEntity<List<Booking>> viewAllBookings(){
+		return new ResponseEntity<List<Booking>>(bookingServices.viewAllBookings(), HttpStatus.OK);
+	}
+	
+	@GetMapping("/viewByBookingDates/{bookingDate}")
+	public ResponseEntity<List<Booking>> viewAllBookingsByBookingDate(@PathVariable LocalDate bookingDate){
+		return new ResponseEntity<List<Booking>>(bookingServices.viewBookingsByDate(bookingDate), HttpStatus.OK);
+	}
+	
+	@GetMapping("/BookingByBookingIds/{bookingId}")
+	public ResponseEntity<Booking> viewBookingById(@PathVariable Integer BookingId){
+		return new ResponseEntity<Booking>(bookingServices.viewBookingById(BookingId), HttpStatus.OK);
+	}
+	
+	@GetMapping("/BookingByPnrNumbers/{pnrNumber}")
+	public ResponseEntity<Booking> viewBookingById(@PathVariable String pnrNumber){
+		return new ResponseEntity<Booking>(bookingServices.viewBookingByPnr(pnrNumber), HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/cancelBookings")
+	public ResponseEntity<Booking> cancelBooking(@PathVariable Integer bookingId){
+		return new ResponseEntity<Booking>(bookingServices.cancelBooking(bookingId), HttpStatus.OK);
+	}
+	
+	@GetMapping("/bookingsByFlight/{flightId}")
+	public ResponseEntity<List<Booking>> viewAllBookingsByFlight(@PathVariable Integer flightId){
+		return new ResponseEntity<List<Booking>>(bookingServices.viewAllBookingsOfFlight(flightId), HttpStatus.OK);
+	}
 	
 }

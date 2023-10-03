@@ -1,0 +1,249 @@
+2023-09-30T15:53:51.150+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 2396 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-09-30T15:53:51.157+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-30T15:53:51.285+05:30  INFO 2396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-30T15:53:51.314+05:30  INFO 2396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-30T15:53:53.066+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30T15:53:53.268+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 10 JPA repository interfaces.
+2023-09-30T15:53:54.251+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-09-30T15:53:54.265+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30T15:53:54.266+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-30T15:53:54.387+05:30  INFO 2396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30T15:53:54.388+05:30  INFO 2396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3073 ms
+2023-09-30T15:53:54.622+05:30  INFO 2396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30T15:53:54.736+05:30  INFO 2396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-09-30T15:53:54.739+05:30  INFO 2396 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-30T15:53:54.992+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T15:53:55.237+05:30  INFO 2396 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-30T15:53:55.261+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-30T15:53:55.723+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1508dce4
+2023-09-30T15:53:55.727+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-30T15:53:56.309+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T15:53:57.671+05:30  INFO 2396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30T15:53:58.011+05:30  INFO 2396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T15:53:59.179+05:30  WARN 2396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30T15:53:59.676+05:30  INFO 2396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@452ba29, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52cb982, org.springframework.security.web.context.SecurityContextHolderFilter@b7e85f2, org.springframework.security.web.header.HeaderWriterFilter@64665f0a, org.springframework.web.filter.CorsFilter@79827b60, org.springframework.security.web.authentication.logout.LogoutFilter@c1d82b9, com.naishaairlines.utilities.JwtTokenValidator@642cc431, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@495914dd, com.naishaairlines.utilities.JwtTokenGenerator@753eb96f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@357739, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f3ae4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@153eeee3, org.springframework.security.web.session.SessionManagementFilter@16cd6778, org.springframework.security.web.access.ExceptionTranslationFilter@1e417a00, org.springframework.security.web.access.intercept.AuthorizationFilter@1b4b71be]
+2023-09-30T15:54:00.236+05:30  INFO 2396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30T15:54:00.308+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-09-30T15:54:00.329+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 9.809 seconds (process running for 11.232)
+2023-09-30T15:56:13.045+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-30T15:56:13.046+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-30T15:56:13.048+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-30T15:56:13.063+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2023-09-30T15:56:13.073+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:13.095+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2023-09-30T15:56:13.174+05:30 DEBUG 2396 --- [http-nio-8088-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2023-09-30T15:56:13.175+05:30 DEBUG 2396 --- [http-nio-8088-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:13.176+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2023-09-30T15:56:13.176+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2023-09-30T15:56:13.177+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:13.177+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:13.177+05:30 DEBUG 2396 --- [http-nio-8088-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2023-09-30T15:56:13.179+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2023-09-30T15:56:13.179+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2023-09-30T15:56:13.256+05:30 DEBUG 2396 --- [http-nio-8088-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-09-30T15:56:13.256+05:30 DEBUG 2396 --- [http-nio-8088-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:13.257+05:30 DEBUG 2396 --- [http-nio-8088-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-09-30T15:56:13.264+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2023-09-30T15:56:13.265+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:13.267+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2023-09-30T15:56:14.259+05:30 DEBUG 2396 --- [http-nio-8088-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2023-09-30T15:56:14.260+05:30 DEBUG 2396 --- [http-nio-8088-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:14.265+05:30 DEBUG 2396 --- [http-nio-8088-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2023-09-30T15:56:14.403+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2023-09-30T15:56:14.404+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T15:56:14.405+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2023-09-30T15:56:15.138+05:30  INFO 2396 --- [http-nio-8088-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 706 ms
+2023-09-30T15:56:37.096+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /admins/login
+2023-09-30T15:56:37.637+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-09-30T15:56:37.637+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-09-30T15:56:37.669+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /admins/login
+2023-09-30T15:57:06.655+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admins/airports
+2023-09-30T15:57:06.711+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admins/airports
+2023-09-30T15:57:21.544+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admins/flights
+2023-09-30T15:57:21.549+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admins/flights
+2023-09-30T15:58:17.027+05:30 DEBUG 2396 --- [http-nio-8088-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admins/arrivingFlights/1
+2023-09-30T15:58:17.035+05:30 DEBUG 2396 --- [http-nio-8088-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admins/arrivingFlights/1
+2023-09-30T15:58:17.093+05:30  WARN 2396 --- [http-nio-8088-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.naishaairlines.exceptions.NoDataFoundException: No flights Found]
+2023-09-30T15:58:23.316+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admins/arrivingFlights/2
+2023-09-30T15:58:23.320+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admins/arrivingFlights/2
+2023-09-30T16:03:01.825+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admins/passengers
+2023-09-30T16:03:01.829+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admins/passengers
+2023-09-30T16:03:01.840+05:30  WARN 2396 --- [http-nio-8088-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.naishaairlines.exceptions.NoDataFoundException: No Passengers Found]
+2023-09-30T16:03:24.191+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admins/totalSeats/1
+2023-09-30T16:03:24.195+05:30 DEBUG 2396 --- [http-nio-8088-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admins/totalSeats/1
+2023-09-30T16:03:47.227+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admins/availableSeats/1
+2023-09-30T16:03:47.234+05:30 DEBUG 2396 --- [http-nio-8088-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admins/availableSeats/1
+2023-09-30T16:09:40.880+05:30 DEBUG 2396 --- [http-nio-8088-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /passengers/register
+2023-09-30T16:09:40.881+05:30 DEBUG 2396 --- [http-nio-8088-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-09-30T16:09:40.882+05:30 DEBUG 2396 --- [http-nio-8088-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /passengers/register
+2023-09-30T16:10:16.968+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /passengers/login
+2023-09-30T16:10:17.123+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-09-30T16:10:17.124+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=wasimbaig, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PASSENGER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_PASSENGER]]
+2023-09-30T16:10:17.126+05:30 DEBUG 2396 --- [http-nio-8088-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /passengers/login
+2023-09-30T16:12:18.891+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /passengers/bookTickets
+2023-09-30T16:12:18.895+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /passengers/bookTickets
+2023-09-30T16:12:18.915+05:30  WARN 2396 --- [http-nio-8088-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.naishaairlines.exceptions.NoDataFoundException: No Flight Found With Flight Number string]
+2023-09-30T16:13:34.104+05:30  INFO 2396 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-30T16:13:34.124+05:30  INFO 2396 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-30T16:13:34.125+05:30  INFO 2396 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-30T16:13:34.134+05:30  INFO 2396 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:13:34.138+05:30  INFO 2396 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-30T16:13:34.146+05:30  INFO 2396 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-30T16:13:34.266+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 2396 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-09-30T16:13:34.266+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-30T16:13:34.801+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30T16:13:34.839+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 10 JPA repository interfaces.
+2023-09-30T16:13:35.025+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-09-30T16:13:35.026+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30T16:13:35.026+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-30T16:13:35.054+05:30  INFO 2396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30T16:13:35.055+05:30  INFO 2396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
+2023-09-30T16:13:35.121+05:30  INFO 2396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30T16:13:35.129+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:13:35.129+05:30  INFO 2396 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-30T16:13:35.131+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-09-30T16:13:35.149+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bde4582
+2023-09-30T16:13:35.149+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-09-30T16:13:35.214+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:13:35.459+05:30  INFO 2396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30T16:13:35.727+05:30  INFO 2396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:13:36.163+05:30  WARN 2396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30T16:13:36.312+05:30  INFO 2396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@511a43c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3542b47e, org.springframework.security.web.context.SecurityContextHolderFilter@799e2628, org.springframework.security.web.header.HeaderWriterFilter@388b04ca, org.springframework.web.filter.CorsFilter@5d1e046a, org.springframework.security.web.authentication.logout.LogoutFilter@68aa5c26, com.naishaairlines.utilities.JwtTokenValidator@6d8a42c2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6beb69f2, com.naishaairlines.utilities.JwtTokenGenerator@6e8d30dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5232ce6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65eec5dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e4c8836, org.springframework.security.web.session.SessionManagementFilter@1fd346be, org.springframework.security.web.access.ExceptionTranslationFilter@78209c29, org.springframework.security.web.access.intercept.AuthorizationFilter@6721f2be]
+2023-09-30T16:13:36.521+05:30  INFO 2396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30T16:13:36.538+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-09-30T16:13:36.552+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 2.329 seconds (process running for 1187.456)
+2023-09-30T16:13:36.558+05:30  INFO 2396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-30T16:13:46.486+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-30T16:13:46.487+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-30T16:13:46.489+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-30T16:13:46.490+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /passengers/bookTickets
+2023-09-30T16:13:46.498+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /passengers/bookTickets
+2023-09-30T16:15:33.345+05:30  INFO 2396 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-30T16:15:33.367+05:30  INFO 2396 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-30T16:15:33.367+05:30  INFO 2396 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-30T16:15:33.375+05:30  INFO 2396 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:15:33.376+05:30  INFO 2396 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-09-30T16:15:33.381+05:30  INFO 2396 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-09-30T16:15:33.493+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 2396 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-09-30T16:15:33.494+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-30T16:15:33.807+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30T16:15:33.848+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 10 JPA repository interfaces.
+2023-09-30T16:15:34.013+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-09-30T16:15:34.014+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30T16:15:34.014+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-30T16:15:34.049+05:30  INFO 2396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30T16:15:34.049+05:30  INFO 2396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2023-09-30T16:15:34.125+05:30  INFO 2396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30T16:15:34.133+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:15:34.133+05:30  INFO 2396 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-30T16:15:34.134+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-09-30T16:15:34.148+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f084de6
+2023-09-30T16:15:34.148+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-09-30T16:15:34.190+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:15:34.381+05:30  INFO 2396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30T16:15:34.625+05:30  INFO 2396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:15:34.960+05:30  WARN 2396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30T16:15:35.092+05:30  INFO 2396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3bbb48e4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5384197a, org.springframework.security.web.context.SecurityContextHolderFilter@2b8fb76, org.springframework.security.web.header.HeaderWriterFilter@3abf400a, org.springframework.web.filter.CorsFilter@65e5a560, org.springframework.security.web.authentication.logout.LogoutFilter@724f4ddd, com.naishaairlines.utilities.JwtTokenValidator@40055608, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3312dafe, com.naishaairlines.utilities.JwtTokenGenerator@2118da84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ae65521, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a19f767, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52245814, org.springframework.security.web.session.SessionManagementFilter@67cf4445, org.springframework.security.web.access.ExceptionTranslationFilter@5af64808, org.springframework.security.web.access.intercept.AuthorizationFilter@4f1f390b]
+2023-09-30T16:15:35.359+05:30  INFO 2396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30T16:15:35.386+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-09-30T16:15:35.412+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.949 seconds (process running for 1306.315)
+2023-09-30T16:15:35.418+05:30  INFO 2396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-30T16:16:07.015+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-30T16:16:07.016+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-30T16:16:07.017+05:30  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-30T16:16:07.018+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /passengers/bookTickets
+2023-09-30T16:16:07.023+05:30 DEBUG 2396 --- [http-nio-8088-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /passengers/bookTickets
+2023-09-30T16:27:34.255+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /admins/login
+2023-09-30T16:27:34.690+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-09-30T16:27:34.690+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-09-30T16:27:34.693+05:30 DEBUG 2396 --- [http-nio-8088-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /admins/login
+2023-09-30T16:27:56.889+05:30 DEBUG 2396 --- [http-nio-8088-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admins/passengers
+2023-09-30T16:27:56.892+05:30 DEBUG 2396 --- [http-nio-8088-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admins/passengers
+2023-09-30T16:51:17.558+05:30  INFO 2396 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-09-30T16:51:17.576+05:30  INFO 2396 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-30T16:51:17.577+05:30  INFO 2396 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-30T16:51:17.585+05:30  INFO 2396 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:51:17.586+05:30  INFO 2396 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-09-30T16:51:17.590+05:30  INFO 2396 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-09-30T16:51:17.709+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 2396 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-09-30T16:51:17.710+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-30T16:51:18.363+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30T16:51:18.431+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 10 JPA repository interfaces.
+2023-09-30T16:51:18.606+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-09-30T16:51:18.606+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30T16:51:18.607+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-30T16:51:18.635+05:30  INFO 2396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30T16:51:18.635+05:30  INFO 2396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 922 ms
+2023-09-30T16:51:18.717+05:30  INFO 2396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30T16:51:18.732+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:51:18.733+05:30  INFO 2396 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-30T16:51:18.736+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-09-30T16:51:18.756+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17c47f5
+2023-09-30T16:51:18.757+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-09-30T16:51:18.811+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:51:19.007+05:30  INFO 2396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30T16:51:19.307+05:30  INFO 2396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:51:19.607+05:30  WARN 2396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30T16:51:19.726+05:30  INFO 2396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15426774, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f34f703, org.springframework.security.web.context.SecurityContextHolderFilter@5bcf850b, org.springframework.security.web.header.HeaderWriterFilter@1bc00c53, org.springframework.web.filter.CorsFilter@3ac5e490, org.springframework.security.web.authentication.logout.LogoutFilter@612f7a4b, com.naishaairlines.utilities.JwtTokenValidator@188de8c0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@fa5a9e9, com.naishaairlines.utilities.JwtTokenGenerator@1e724562, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@467ff2a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d46ccad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16f62540, org.springframework.security.web.session.SessionManagementFilter@74ddfde8, org.springframework.security.web.access.ExceptionTranslationFilter@12a1f196, org.springframework.security.web.access.intercept.AuthorizationFilter@33b4da17]
+2023-09-30T16:51:19.949+05:30  INFO 2396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30T16:51:19.967+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-09-30T16:51:19.975+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 2.3 seconds (process running for 3450.878)
+2023-09-30T16:51:19.977+05:30  INFO 2396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-30T16:51:26.561+05:30  INFO 2396 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-09-30T16:51:26.578+05:30  INFO 2396 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-30T16:51:26.585+05:30  INFO 2396 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:51:26.586+05:30  INFO 2396 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-09-30T16:51:26.591+05:30  INFO 2396 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-09-30T16:51:26.706+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 2396 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-09-30T16:51:26.706+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-30T16:51:26.970+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30T16:51:27.009+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 10 JPA repository interfaces.
+2023-09-30T16:51:27.147+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-09-30T16:51:27.147+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30T16:51:27.147+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-30T16:51:27.173+05:30  INFO 2396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30T16:51:27.173+05:30  INFO 2396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 464 ms
+2023-09-30T16:51:27.223+05:30  INFO 2396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30T16:51:27.234+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:51:27.235+05:30  INFO 2396 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-30T16:51:27.236+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-09-30T16:51:27.253+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@457df046
+2023-09-30T16:51:27.253+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-09-30T16:51:27.296+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:51:27.462+05:30  INFO 2396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30T16:51:27.681+05:30  INFO 2396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:51:27.975+05:30  WARN 2396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30T16:51:28.112+05:30  INFO 2396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@734dd28b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4944e6b3, org.springframework.security.web.context.SecurityContextHolderFilter@5d946f2e, org.springframework.security.web.header.HeaderWriterFilter@32864954, org.springframework.web.filter.CorsFilter@454bc0aa, org.springframework.security.web.authentication.logout.LogoutFilter@7370dd93, com.naishaairlines.utilities.JwtTokenValidator@6395e3d9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a41b89, com.naishaairlines.utilities.JwtTokenGenerator@7ed1acaa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@536e9885, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5322a755, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10ceacbd, org.springframework.security.web.session.SessionManagementFilter@aba94a3, org.springframework.security.web.access.ExceptionTranslationFilter@2e741001, org.springframework.security.web.access.intercept.AuthorizationFilter@1223c41d]
+2023-09-30T16:51:28.336+05:30  INFO 2396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30T16:51:28.361+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-09-30T16:51:28.375+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 1.708 seconds (process running for 3459.278)
+2023-09-30T16:51:28.379+05:30  INFO 2396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-30T16:52:38.760+05:30  INFO 2396 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 10 class path changes (1 addition, 1 deletion, 8 modifications)
+2023-09-30T16:52:38.782+05:30  INFO 2396 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-30T16:52:38.787+05:30  INFO 2396 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:52:38.788+05:30  INFO 2396 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-09-30T16:52:38.795+05:30  INFO 2396 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-09-30T16:52:38.915+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Starting NaishaAirlinesApplication using Java 17.0.6 with PID 2396 (D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines\target\classes started by nmoha in D:\Full Stack Web Development\Naisha Airlines\Naisha-Airlines\Naisha Airlines - Backend\Naisha_Airlines)
+2023-09-30T16:52:38.915+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-09-30T16:52:39.259+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30T16:52:39.301+05:30  INFO 2396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 10 JPA repository interfaces.
+2023-09-30T16:52:39.442+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2023-09-30T16:52:39.443+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30T16:52:39.443+05:30  INFO 2396 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-09-30T16:52:39.470+05:30  INFO 2396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30T16:52:39.471+05:30  INFO 2396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 551 ms
+2023-09-30T16:52:39.553+05:30  INFO 2396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30T16:52:39.564+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:52:39.564+05:30  INFO 2396 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-30T16:52:39.565+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-09-30T16:52:39.585+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a4363ac
+2023-09-30T16:52:39.585+05:30  INFO 2396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-09-30T16:52:39.636+05:30  INFO 2396 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-30T16:52:39.869+05:30  INFO 2396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30T16:52:40.130+05:30  INFO 2396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30T16:52:40.554+05:30  WARN 2396 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30T16:52:40.720+05:30  INFO 2396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@dcda735, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f892cf3, org.springframework.security.web.context.SecurityContextHolderFilter@1ce7834f, org.springframework.security.web.header.HeaderWriterFilter@3e7684f9, org.springframework.web.filter.CorsFilter@7b9e5951, org.springframework.security.web.authentication.logout.LogoutFilter@1728ea3c, com.naishaairlines.utilities.JwtTokenValidator@fc68ba, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5de4dfbf, com.naishaairlines.utilities.JwtTokenGenerator@6068939f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@165c500a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c075f74, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46a0c5d5, org.springframework.security.web.session.SessionManagementFilter@3be2177d, org.springframework.security.web.access.ExceptionTranslationFilter@4b382138, org.springframework.security.web.access.intercept.AuthorizationFilter@45da3b28]
+2023-09-30T16:52:40.977+05:30  INFO 2396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30T16:52:40.993+05:30  INFO 2396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2023-09-30T16:52:41.006+05:30  INFO 2396 --- [restartedMain] c.n.NaishaAirlinesApplication            : Started NaishaAirlinesApplication in 2.128 seconds (process running for 3531.91)
+2023-09-30T16:52:41.010+05:30  INFO 2396 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
