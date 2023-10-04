@@ -25,8 +25,10 @@ public class Seat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private Integer seatId;
+    
     @NotBlank(message = "Seat number is required")
-    private Integer seatNumber;
+    private String SeatNumber;
     
     @NotBlank(message = "Class type is required")
     private String classType;
@@ -49,11 +51,13 @@ public class Seat {
     @JsonIgnore
     private AdditionalPassenger additionalPassengerSeat;
 
-	public Seat(@NotBlank(message = "Class type is required") String classType,
+	public Seat(@NotBlank(message = "Seat number is required") String seatNumber,
+			@NotBlank(message = "Class type is required") String classType,
 			@PositiveOrZero(message = "Price must be a positive or zero value") double price, boolean isBooked,
 			@NotNull(message = "Flight is required") Flight flight, Booking booking,
 			AdditionalPassenger additionalPassengerSeat) {
 		super();
+		SeatNumber = seatNumber;
 		this.classType = classType;
 		this.price = price;
 		this.isBooked = isBooked;
@@ -61,6 +65,5 @@ public class Seat {
 		this.booking = booking;
 		this.additionalPassengerSeat = additionalPassengerSeat;
 	}
-    
  
 }

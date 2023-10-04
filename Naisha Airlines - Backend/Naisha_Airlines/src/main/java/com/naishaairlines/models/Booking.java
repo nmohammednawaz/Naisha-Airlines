@@ -46,11 +46,10 @@ public class Booking {
     private Passenger passenger;
     
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
-//    @JsonIgnore
     private List<AdditionalPassenger> additionalPassengers = new ArrayList<>();
     
     @OneToOne
-    @JoinColumn(name = "passenger_seat_number")
+    @JoinColumn(name = "passenger_seat_id")
     @JsonIgnore
     private Seat seat;
     
@@ -75,6 +74,24 @@ public class Booking {
     @JsonIgnore
     private Feedback feedback;
 
-	
- 
+	public Booking(@NotNull(message = "Flight is required") Flight flight,
+			@NotNull(message = "PNR is required") String pnrNumber, Passenger passenger,
+			List<AdditionalPassenger> additionalPassengers, Seat seat,
+			@NotNull(message = "Booked on date is required") LocalDate bookedOn,
+			@NotNull(message = "Booking date is required") LocalDate bookingDate,
+			@NotBlank(message = "Booking status is required") String bookingStatus, Ticket ticket, Payment payment,
+			Feedback feedback) {
+		super();
+		this.flight = flight;
+		this.pnrNumber = pnrNumber;
+		this.passenger = passenger;
+		this.additionalPassengers = additionalPassengers;
+		this.seat = seat;
+		this.bookedOn = bookedOn;
+		this.bookingDate = bookingDate;
+		this.bookingStatus = bookingStatus;
+		this.ticket = ticket;
+		this.payment = payment;
+		this.feedback = feedback;
+	}
 }

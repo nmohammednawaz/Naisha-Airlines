@@ -10,6 +10,7 @@ import com.naishaairlines.exceptions.DuplicateDataException;
 import com.naishaairlines.exceptions.NoDataFoundException;
 import com.naishaairlines.models.Airport;
 import com.naishaairlines.models.Flight;
+import com.naishaairlines.models.Seat;
 import com.naishaairlines.repository.FlightRepository;
 
 @Service
@@ -20,6 +21,61 @@ public class FlightServiceImplements implements FlightServices {
 	
 	@Autowired
 	private AirportServices airportServices;
+	
+	@Autowired
+	private SeatServices seatServices;
+	
+	public double calculatePrice(String classType) {
+
+	    double price = 0.0;
+	    if (classType.equals("Economy")) {
+	        price = 300.0;
+	    } else if (classType.equals("Premium Economy")) {
+	        price = 750.0;
+	    } else if (classType.equals("Business")) {
+	        price = 1300.0;
+	    } else if (classType.equals("First Class")) {
+	        price = 2500.0;
+	    }
+	    return price;
+	}
+	
+	public void createSeats(Flight flight) {
+		
+		int numberOfSeats = flight.getTotalSeats();
+		
+		// Calculate the number of seats for each category
+	    int firstClassSeats = (int) (numberOfSeats * 0.05); // 5% for First Class
+	    int businessSeats = (int) (numberOfSeats * 0.15); // 15% for Business
+	    int premiumEconomySeats = (int) (numberOfSeats * 0.30); // 30% for Premium Economy
+	    int economySeats = numberOfSeats - (firstClassSeats + businessSeats + premiumEconomySeats); // Remaining for Economy
+	    
+	 // Create seats for each category
+	    for (int i = 1; i <= firstClassSeats; i++) {
+	        Seat seat = new Seat("NAFC" + i, "First Class", calculatePrice("First Class"), false, flight, null, null);
+	        Seat registeredSeat = seatServices.registerSeat(seat);
+	        flight.getSeats().add(registeredSeat);
+	    }
+
+	    for (int i = 1; i <= businessSeats; i++) {
+	        Seat seat = new Seat("NABC" + i, "Business", calculatePrice("Business"), false, flight, null, null);
+	        Seat registeredSeat = seatServices.registerSeat(seat);
+	        flight.getSeats().add(registeredSeat);
+	    }
+
+	    for (int i = 1; i <= premiumEconomySeats; i++) {
+	        Seat seat = new Seat("NAPC" + i, "Premium Economy", calculatePrice("Premium Economy"), false, flight, null, null);
+	        Seat registeredSeat = seatServices.registerSeat(seat);
+	        flight.getSeats().add(registeredSeat);
+	    }
+
+	    for (int i = 1; i <= economySeats; i++) {
+	        Seat seat = new Seat("NAEC" + i, "Economy", calculatePrice("Economy"), false, flight, null, null);
+	        Seat registeredSeat = seatServices.registerSeat(seat);
+	        flight.getSeats().add(registeredSeat);
+	    }
+	    
+	}
 
 	@Override
 	public Flight registerFlight(Flight flight) throws DuplicateDataException {
@@ -34,7 +90,8 @@ public class FlightServiceImplements implements FlightServices {
 		arrivalAirport.getArrivingFlights().add(registeredFlight);
 		departureAirport.getDepartingFlights().add(registeredFlight);
 		airportServices.updateAirport(departureAirport);
-		airportServices.updateAirport(arrivalAirport);	
+		airportServices.updateAirport(arrivalAirport);
+		createSeats(registeredFlight);
 		return registeredFlight;
 	}
 

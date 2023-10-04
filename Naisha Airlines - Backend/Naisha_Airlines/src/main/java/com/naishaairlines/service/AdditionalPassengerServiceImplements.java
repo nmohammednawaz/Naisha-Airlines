@@ -27,6 +27,12 @@ public class AdditionalPassengerServiceImplements implements AdditionalPassenger
 		return null;
 	}
 
+	@Override
+	public AdditionalPassenger findAdditionalPassengerById(Integer additionalPassengerId) throws NoDataFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 
 }

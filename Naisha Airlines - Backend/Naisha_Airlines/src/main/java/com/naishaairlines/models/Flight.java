@@ -56,7 +56,7 @@ public class Flight {
     @Positive(message = "Fare must be a positive value")
     private double fare;
     
-    @OneToMany(mappedBy = "flight")
+	@OneToMany(mappedBy = "flight")
     @JsonIgnore
     private List<Seat> seats = new ArrayList<>();
     

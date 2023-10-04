@@ -44,7 +44,7 @@ public class AdditionalPassenger {
     private Booking booking;
     
     @OneToOne
-    @JoinColumn(name = "seat_number")
+    @JoinColumn(name = "seat_id")
     @JsonIgnore
     private Seat seat;
 
@@ -61,6 +61,8 @@ public class AdditionalPassenger {
 		this.booking = booking;
 		this.seat = seat;
 	}
+    
+    
     
 	
 }

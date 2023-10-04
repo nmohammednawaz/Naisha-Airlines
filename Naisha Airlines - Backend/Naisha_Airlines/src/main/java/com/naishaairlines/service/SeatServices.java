@@ -9,7 +9,8 @@ import com.naishaairlines.models.Seat;
 public interface SeatServices {
 	
 	Seat registerSeat(Seat seat) throws DuplicateDataException;
-	Seat viewSeatBySeatNumber(Integer seatNumber) throws NoDataFoundException;
+	Seat viewSeatBySeatId(Integer seatId) throws NoDataFoundException;
+	Seat viewSeatBySeatNumber(String seatNumber) throws NoDataFoundException;
 	List<Seat> viewSeatByClasstype(String classType) throws NoDataFoundException;
 	List<Seat> viewSeatByFlight(Integer flightId) throws NoDataFoundException;
 	Seat viewSeatByBookingId(Integer bookingId) throws NoDataFoundException;
