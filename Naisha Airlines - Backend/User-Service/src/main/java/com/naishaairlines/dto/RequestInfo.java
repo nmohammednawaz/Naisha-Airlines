@@ -1,7 +1,9 @@
 package com.naishaairlines.dto;
 
 import com.naishaairlines.model.NaishaAirlineUser;
+import lombok.Data;
 
+@Data
 public class RequestInfo {
 
     private String requestId;

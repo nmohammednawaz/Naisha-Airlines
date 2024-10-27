@@ -2,8 +2,11 @@ package com.naishaairlines.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PastOrPresent;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class CustomException {
 
     @NotBlank(message = "Message is required")

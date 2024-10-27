@@ -1,9 +1,18 @@
 package com.naishaairlines.enums;
 
-public class UserRole {
+import lombok.Getter;
 
-//    USER("User"),                // Regular user role
-//    ADMIN("Administrator"),       // Admin role with elevated privileges
-//    STAFF("Staff");
+@Getter
+public enum UserRole {
+
+    USER("User"),
+    ADMIN("Administrator"),
+    STAFF("Staff");
+
+    private final String description;
+
+    UserRole(String description) {
+        this.description = description;
+    }
 
 }
